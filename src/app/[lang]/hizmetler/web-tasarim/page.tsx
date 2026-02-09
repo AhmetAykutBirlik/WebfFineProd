@@ -1,5 +1,20 @@
 import { getDictionary } from "@/lib/i18n";
 import { MoveRight } from "lucide-react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dictionary = await getDictionary(lang);
+
+    return {
+        title: `${dictionary.services.webDesign.title} | WebFine`,
+        description: dictionary.services.webDesign.desc,
+    };
+}
 
 export default async function WebDesign({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;

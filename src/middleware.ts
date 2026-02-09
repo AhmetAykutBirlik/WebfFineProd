@@ -23,6 +23,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next, api, etc.)
-    '/((?!api|_next/static|_next/image|favicon.ico|img).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|img|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
   ],
 };

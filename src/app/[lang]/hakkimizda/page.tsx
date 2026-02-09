@@ -1,5 +1,20 @@
 import { getDictionary } from "@/lib/i18n";
-import { CheckCircle2, Award, Zap, Users, Play } from "lucide-react";
+import { CheckCircle2, Award, Zap, Users } from "lucide-react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dictionary = await getDictionary(lang);
+
+    return {
+        title: `${dictionary.nav.about} | WebFine`,
+        description: dictionary.about.heroDesc,
+    };
+}
 
 export default async function About({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;

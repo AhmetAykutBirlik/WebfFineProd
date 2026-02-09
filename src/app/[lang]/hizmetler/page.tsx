@@ -13,6 +13,21 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dictionary = await getDictionary(lang);
+
+    return {
+        title: `${dictionary.nav.services} | WebFine`,
+        description: dictionary.services.page.desc,
+    };
+}
 
 export default async function Services({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -93,7 +108,7 @@ export default async function Services({ params }: { params: Promise<{ lang: str
                                 <p className="text-lg md:text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">{service.desc}</p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                                    {service.features.map((f, idx) => (
+                                    {service.features.map((f: string, idx: number) => (
                                         <div key={idx} className="flex items-center space-x-3 group">
                                             <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-all flex-shrink-0">
                                                 <CheckCircle2 className="w-4 h-4 text-brand-primary" />

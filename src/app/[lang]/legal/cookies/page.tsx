@@ -1,5 +1,19 @@
 import { getDictionary } from "@/lib/i18n";
 import ReactMarkdown from "react-markdown";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dictionary = await getDictionary(lang);
+
+    return {
+        title: `${dictionary.legalPages.cookies.title} | WebFine`,
+    };
+}
 
 export default async function CookiesPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;

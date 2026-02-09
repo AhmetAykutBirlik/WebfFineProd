@@ -1,6 +1,21 @@
 import { getDictionary } from "@/lib/i18n";
 import { ArrowRight, ExternalLink, Layout, Star, Trophy, Crown, Sparkles, Gem } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const dictionary = await getDictionary(lang);
+
+    return {
+        title: `${dictionary.projects.heroTitle} | WebFine`,
+        description: dictionary.projects.heroDesc,
+    };
+}
 
 export default async function Projects({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;

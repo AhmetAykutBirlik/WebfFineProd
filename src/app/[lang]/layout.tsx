@@ -17,10 +17,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin", "latin-ext"],
 });
 
-export const metadata: Metadata = {
-  title: "WebFine | Profesyonel Web Çözümleri",
-  description: "Web Tasarım, Hosting ve SEO Hizmetleri",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary.common.meta.title,
+    description: dictionary.common.meta.description,
+    metadataBase: new URL("https://webfine.com.tr"),
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        tr: "/tr",
+        en: "/en",
+      },
+    },
+    icons: {
+      icon: "/favicon.svg?v=1",
+      shortcut: "/favicon.svg?v=1",
+    },
+    openGraph: {
+      title: dictionary.common.meta.title,
+      description: dictionary.common.meta.description,
+      url: `https://webfine.com.tr/${lang}`,
+      siteName: "WebFine",
+      locale: lang === "tr" ? "tr_TR" : "en_US",
+      type: "website",
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -35,8 +64,8 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <head>
-        <title>{dictionary.common.meta.title}</title>
-        <meta name="description" content={dictionary.common.meta.description} />
+        <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg?v=1" type="image/svg+xml" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

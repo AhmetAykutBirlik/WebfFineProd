@@ -27,6 +27,7 @@ export default function Footer({ dictionary, lang }: { dictionary: any, lang: st
                             <li><Link href={`/${lang}/hizmetler#web-tasarim`} className="text-gray-400 hover:text-white transition-colors text-sm font-bold flex items-center group">{dictionary.services.webDesign.title}</Link></li>
                             <li><Link href={`/${lang}/hizmetler#hosting`} className="text-gray-400 hover:text-white transition-colors text-sm font-bold flex items-center group">{dictionary.services.hosting.title}</Link></li>
                             <li><Link href={`/${lang}/hizmetler#domain`} className="text-gray-400 hover:text-white transition-colors text-sm font-bold flex items-center group">{dictionary.services.domain.title}</Link></li>
+                            <li><Link href={`/${lang}/blog`} className="text-gray-400 hover:text-white transition-colors text-sm font-bold flex items-center group">{dictionary.nav.blog}</Link></li>
                         </ul>
                     </div>
 
