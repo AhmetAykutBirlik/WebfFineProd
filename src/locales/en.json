@@ -1,0 +1,328 @@
+{
+    "common": {
+        "whatsapp": {
+            "cta": "Contact via WhatsApp",
+            "floating": "WhatsApp",
+            "message": "Hello, I would like to get information about WebFine packages."
+        },
+        "loading": "Loading...",
+        "error": "An error occurred.",
+        "meta": {
+            "title": "Web Design, Hosting and SEO Services | Webfine",
+            "description": "Professional web design, fast hosting, SEO and security solutions for your business with Webfine."
+        },
+        "buttons": {
+            "getStarted": "Get Started",
+            "contactUs": "Contact Us",
+            "viewAll": "View All"
+        },
+        "cookieBanner": {
+            "title": "Enhancing Your Experience",
+            "desc": "We use cookies to provide you with a better experience and analyze traffic.",
+            "accept": "Accept",
+            "decline": "Decline"
+        }
+    },
+    "nav": {
+        "home": "HOME",
+        "about": "ABOUT US",
+        "projects": "PROJECTS",
+        "contact": "CONTACT",
+        "services": "SERVICES"
+    },
+    "home": {
+        "hero": {
+            "badge": "Your Digital Transformation Partner",
+            "title": "Establish a Powerful Digital Legacy",
+            "subtitle": "At WebFine, we design modern, performance-driven web experiences that mirror the prestige of your business in the digital world.",
+            "cta": "Let's Begin"
+        },
+        "why": {
+            "title": "Why WebFine?",
+            "desc": "We offer professional, modern, and reliable web solutions for small and medium-sized businesses. Everything in one package, no technical hassle.",
+            "security": "Free SSL & Security",
+            "securityDesc": "Every site includes SSL and Wordfence firewall protection.",
+            "storage": "Daily Backups",
+            "storageDesc": "Safely stored on the cloud for your peace of mind.",
+            "speed": "Fast Deployment",
+            "speedDesc": "Domain + Hosting + Site → Live in 3 business days.",
+            "support": "24/7 Support",
+            "supportDesc": "Phone and WhatsApp support for any questions.",
+            "uptime": "Uptime Guarantee"
+        },
+        "packages": {
+            "title": "Web Packages for Every Business",
+            "subtitle": "Domain, hosting, corporate email, web design, and maintenance – all in one package. Choose the plan that fits you best.",
+            "notice": "",
+            "whoIsItFor": "Who is it for?",
+            "featured": "Featured",
+            "content": "Content:",
+            "starter": {
+                "title": "Starter Pack",
+                "badge": "Beginner",
+                "price": "",
+                "desc": "The perfect starting package for small businesses and startups.",
+                "who": "Small businesses just starting out, individual entrepreneurs.",
+                "bullets": [
+                    "Hosting (1 year)",
+                    "1 Domain (.com / .com.tr)",
+                    "5 Corporate Email Accounts",
+                    "Website Up to 3 Pages (Home, About, Contact)",
+                    "Mobile responsive design",
+                    "SSL Certificate",
+                    "Contact Form + WhatsApp Button",
+                    "Basic SEO setup",
+                    "1 Year Maintenance & Updates"
+                ],
+                "cta": "ENQUIRE"
+            },
+            "business": {
+                "title": "Business Pack",
+                "badge": "Most Popular",
+                "price": "",
+                "desc": "The ideal solution for SMEs looking for a professional look.",
+                "who": "SMEs and businesses seeking a professional digital presence.",
+                "bullets": [
+                    "Hosting (1 year)",
+                    "1 Domain (.com / .com.tr)",
+                    "5 Corporate Email Accounts",
+                    "Website Up to 6 Pages (Home, About, Services, Blog, Contact)",
+                    "Elementor Pro + Premium Template",
+                    "Mobile responsive design",
+                    "SSL Certificate",
+                    "Contact Form + WhatsApp Button",
+                    "Basic SEO setup",
+                    "Google Analytics integration",
+                    "1 Year Maintenance & Updates"
+                ],
+                "cta": "DISCOVER"
+            },
+            "professional": {
+                "title": "Professional Pack",
+                "badge": "Enterprise",
+                "price": "",
+                "desc": "Specialized for businesses with comprehensive website needs.",
+                "who": "Businesses requiring a more extensive web presence.",
+                "bullets": [
+                    "Hosting (1 year)",
+                    "1 Domain (.com / .com.tr)",
+                    "10 Corporate Email Accounts",
+                    "Website Up to 10 Pages (Blog, FAQ, extra pages included)",
+                    "Elementor Pro + Premium Template",
+                    "Mobile responsive design",
+                    "SSL Certificate",
+                    "Contact Form + WhatsApp Button",
+                    "Basic SEO setup",
+                    "Google Analytics integration",
+                    "1 Year Maintenance & Updates"
+                ],
+                "cta": "START"
+            }
+        },
+        "offerings": {
+            "title": "What We Offer",
+            "desc": "At WebFine, we provide all the solutions your business needs to have a powerful digital showcase in a single package.",
+            "domain": {
+                "title": "Domain & Hosting",
+                "desc": "Bespoke domain names and a bulletproof hosting infrastructure.",
+                "bullets": [
+                    "Annual domain registration",
+                    "Solid hosting foundation"
+                ]
+            },
+            "design": {
+                "title": "Modern Web Design",
+                "desc": "Professional, mobile-compatible, and cutting-edge websites.",
+                "bullets": [
+                    "Elementor Pro + Premium templates",
+                    "Responsive mobile design"
+                ]
+            },
+            "email": {
+                "title": "Corporate Email",
+                "desc": "Dedicated corporate email addresses for your company.",
+                "bullets": [
+                    "info@yourcompany.com",
+                    "Multiple corporate email accounts"
+                ]
+            },
+            "seo": {
+                "title": "SEO & Google Listing",
+                "desc": "Be visible on Google, let customers find you effortlessly.",
+                "bullets": [
+                    "Basic SEO optimization",
+                    "Google Analytics & Search Console"
+                ]
+            },
+            "security": {
+                "title": "Maintenance & Security",
+                "desc": "Ensuring your site stays live and secure at all times.",
+                "bullets": [
+                    "SSL Certificate",
+                    "Daily backups + firewall"
+                ]
+            },
+            "contact": {
+                "title": "Seamless Contact",
+                "desc": "Your visitors can reach you instantly.",
+                "bullets": [
+                    "WhatsApp integration",
+                    "Direct contact form"
+                ]
+            }
+        },
+        "steps": {
+            "title": "Your Site Ready in 3 Steps",
+            "subtitle": "Get your professional website with WebFine in 3 easy steps.",
+            "step1": {
+                "title": "Domain Selection",
+                "desc": "We determine the most suitable domain for your business together."
+            },
+            "step2": {
+                "title": "Theme & Design Selection",
+                "desc": "We adapt sectoral designs from Elementor Pro + Premium templates."
+            },
+            "step3": {
+                "title": "Setup & Launch",
+                "desc": "Domain + Hosting + Website launch in just 3 business days."
+            }
+        },
+        "finalCta": {
+            "title": "Let's Design <br /> The Future <br /> Together",
+            "button": "Get In Touch"
+        }
+    },
+    "services": {
+        "page": {
+            "title": "All Our Solutions <br /> In One Power",
+            "desc": "Discover our professional ecosystem designed to ensure the digital identity, security, and speed of your business.",
+            "solutionsSuffix": "Solutions",
+            "startProject": "Start Project",
+            "ecosystem": {
+                "title": "Join the Ecosystem",
+                "desc": "Everything from Domain to Design, Hosting to Security merges under one roof. Say goodbye to complexity.",
+                "button": "Book Now"
+            }
+        },
+        "domain": {
+            "title": "Domain",
+            "desc": "Register your domain name.",
+            "features": [
+                "Free DNS Management",
+                ".com / .com.tr / .net",
+                "Secure Transfer",
+                "Auto Renewals"
+            ]
+        },
+        "hosting": {
+            "title": "Hosting",
+            "desc": "High performance hosting.",
+            "features": [
+                "99.9% Uptime",
+                "Daily Backups",
+                "LiteSpeed Server",
+                "Free SSL",
+                "DDoS Protection"
+            ]
+        },
+        "webDesign": {
+            "title": "Web Design",
+            "desc": "Custom web design for you.",
+            "features": [
+                "UX/UI Design",
+                "Responsive Layouts",
+                "SEO Friendly",
+                "Modern Tech Stack",
+                "Interactive Elements"
+            ]
+        }
+    },
+    "about": {
+        "heroDesc": "WebFine is a technology agency building the future digital world today.",
+        "philosophyTitle": "Pushing Boundaries in the Digital World",
+        "philosophyDesc": "Since its inception, WebFine has approached every project like a work of art with a boutique service mindset. We don't just write code; we create your business's digital legacy.",
+        "vision": {
+            "title": "Our Vision",
+            "desc": "To provide accessible and high-quality solutions that enable small and medium-sized businesses to become giants in the digital world."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "desc": "To offer a transparent, fast, and reliable partnership experience by removing technical barriers in the digitalization process."
+        },
+        "values": {
+            "title": "Our Values",
+            "desc": "Integrity, innovation, speed, and customer satisfaction. We uphold these values in every line of code and every design."
+        },
+        "perks": [
+            "Infinite Scalability",
+            "Next-gen Tech Stack",
+            "Elite Design Team",
+            "24/7 Priority Support"
+        ],
+        "trustedPartner": "Web Solution Partner"
+    },
+    "contact": {
+        "title": "Let's Talk About Your Digital Future",
+        "subtitle": "Have a question or an exciting project in mind?",
+        "desc": "Our team is here to turn your vision into reality. Reach out to us, and we'll respond within 24 hours.",
+        "helpTitle": "How Can We Help?",
+        "social": "Social Media",
+        "location": "Location",
+        "info": {
+            "title": "Contact Information",
+            "phone": "+90 551 521 59 58",
+            "email": "info@webfine.com.tr",
+            "address": "Istanbul, Turkey"
+        },
+        "form": {
+            "nameLabel": "Full Name",
+            "emailLabel": "Email Address",
+            "messageLabel": "Tell Us About Your Project",
+            "messagePlaceholder": "Tell us about your project...",
+            "submit": "Send Message",
+            "success": "Thank you! We'll get in touch as soon as possible.",
+            "reset": "SEND NEW MESSAGE"
+        }
+    },
+    "projects": {
+        "heroTitle": "Our Digital Art Gallery",
+        "heroDesc": "We carry your business to the future with web projects where we push boundaries and carefully craft every pixel.",
+        "viewProject": "View Project",
+        "ctaTitle": "Let the Next Success Story Be Yours",
+        "ctaButton": "Let's Get Started",
+        "categories": {
+            "webDev": "Web Development",
+            "ecommerce": "E-Commerce / Corporate",
+            "corpIdentity": "Corporate Identity",
+            "servicePortal": "Service Portal"
+        }
+    },
+    "footer": {
+        "desc": "WebFine carries your business to the future with modern web technologies.",
+        "copyright": "© 2025 WebFine. All Rights Reserved.",
+        "links": {
+            "services": "Our Services",
+            "legal": "Corporate",
+            "contact": "Contact"
+        },
+        "legal": {
+            "cookies": "Cookie Policy",
+            "kvkk": "GDPR / KVKK",
+            "privacy": "Privacy Policy"
+        }
+    },
+    "legalPages": {
+        "cookies": {
+            "title": "Cookie Policy",
+            "content": "At WebFine, we use cookies to provide you with the best experience on our website.\n\n### What are Cookies?\nCookies are small text files saved to your computer or mobile device by the websites you visit.\n\n### How Do We Use Cookies?\n- **Essential Cookies:** Necessary for basic functions of our site.\n- **Analytical Cookies:** Help us understand how you use our site.\n- **Functional Cookies:** Allow us to remember your preferences.\n\n### How Can You Control Cookies?\nYou can block or delete cookies from your browser settings."
+        },
+        "kvkk": {
+            "title": "GDPR / KVKK",
+            "content": "Protecting your personal data is a priority for WebFine.\n\n### Data Controller\nIn accordance with legal regulations on personal data protection, your personal data may be processed by WebFine as the data controller.\n\n### Purposes of Data Processing\n- Providing and improving our services.\n- Carrying out communication activities.\n- Fulfilling legal obligations.\n\n### Your Rights\nYou have the right to access, correct, and delete your data in accordance with relevant data protection laws."
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "content": "Your privacy is important to us.\n\n### Information We Collect\nWhen you visit our site, fill out a contact form, or use our services, some personal information may be collected.\n\n### Information Security\nWe use the latest security technologies to protect your data against unauthorized access.\n\n### Third Parties\nYour personal data is not shared with third parties except for legal obligations."
+        }
+    }
+}

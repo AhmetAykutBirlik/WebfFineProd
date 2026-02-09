@@ -1,0 +1,417 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-primary: #0066FF;
+  --color-brand-accent: #6366f1;
+  --color-luxury-black: #050507;
+  --color-luxury-gray: #0a0a0c;
+  --color-luxury-border: rgba(255, 255, 255, 0.04);
+
+  --aurora-1: rgba(0, 102, 255, 0.15);
+  --aurora-2: rgba(99, 102, 241, 0.15);
+  --aurora-3: rgba(168, 85, 247, 0.15);
+  --logo-backdrop: rgba(255, 255, 255, 0.1);
+}
+
+:root {
+  --foreground-rgb: 245, 245, 247;
+  --background-start-rgb: 5, 5, 7;
+  --background-end-rgb: 3, 3, 4;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: radial-gradient(circle at center, #0a0a0d 0%, #050507 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.015;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.glass-morphism {
+  background: rgba(10, 10, 12, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-morphism-navbar {
+  background: rgba(8, 8, 12, 0.9);
+  backdrop-filter: blur(50px) saturate(250%);
+  -webkit-backdrop-filter: blur(50px) saturate(250%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.8);
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+  transform: scale(1.05);
+}
+
+.extreme-vivid-aurora {
+  background: radial-gradient(circle at center, rgba(0, 102, 255, 0.4), rgba(99, 102, 241, 0.2), transparent 70%);
+  filter: blur(80px);
+  mix-blend-mode: plus-lighter;
+  animation: float-vivid 10s infinite alternate;
+}
+
+@keyframes float-vivid {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: translate(20px, -20px) scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+.bg-shimmer-sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.03) 50%,
+      transparent 55%);
+  background-size: 200% 200%;
+  animation: shimmer-sweep 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% -200%;
+  }
+
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+.project-card-large {
+  aspect-ratio: 16 / 9;
+}
+
+.text-luxury {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 90%);
+}
+
+.bg-dot {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.stars-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(0.2px);
+  animation: pulse-star var(--d) infinite ease-in-out;
+}
+
+@keyframes pulse-star {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+}
+
+/* Shooting Stars */
+.shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 100px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0) translateY(0) rotateZ(35deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(1000px) translateY(700px) rotateZ(35deg);
+    opacity: 0;
+  }
+}
+
+.premium-shadow {
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+.bg-shimmer {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.03) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0066FF;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #888888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.2);
+}
+
+/* Luxury card glow */
+.text-flow {
+  background: linear-gradient(to right,
+      #ffffff 20%,
+      #0066FF 40%,
+      #0066FF 60%,
+      #ffffff 80%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flow 4s linear infinite;
+}
+
+@keyframes flow {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  15% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  45% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.aurora-blur {
+  filter: blur(100px);
+  will-change: transform;
+}
+
+.border-beam {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-beam::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, transparent, var(--color-brand-primary), transparent);
+  animation: beam 3s linear infinite;
+  z-index: 10;
+}
+
+@keyframes beam {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shiny-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shiny-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+  animation: shiny 4s infinite;
+}
+
+@keyframes shiny {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}

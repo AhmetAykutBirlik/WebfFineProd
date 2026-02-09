@@ -1,0 +1,328 @@
+{
+  "common": {
+    "whatsapp": {
+      "cta": "WhatsApp’tan Hemen Yaz",
+      "floating": "WhatsApp",
+      "message": "Merhaba, WebFine web sitesi paketleri hakkında detaylı bilgi almak istiyorum."
+    },
+    "loading": "Yükleniyor...",
+    "error": "Beklenmeyen bir hata oluştu.",
+    "meta": {
+      "title": "Web Tasarım, Hosting ve SEO Çözümleri | WebFine",
+      "description": "WebFine ile işletmeniz için modern web tasarımı, hızlı hosting, SEO ve güvenlik çözümleri. Her şey dahil web paketleri."
+    },
+    "buttons": {
+      "getStarted": "Hemen Başlayın",
+      "contactUs": "Bizimle İletişime Geçin",
+      "viewAll": "Tümünü İnceleyin"
+    },
+    "cookieBanner": {
+      "title": "Deneyiminizi İyileştiriyoruz",
+      "desc": "Web sitemizi geliştirmek ve size daha iyi bir deneyim sunmak için çerezler kullanıyoruz.",
+      "accept": "Kabul Ediyorum",
+      "decline": "Reddediyorum"
+    }
+  },
+  "nav": {
+    "home": "ANA SAYFA",
+    "about": "HAKKIMIZDA",
+    "projects": "PROJELER",
+    "services": "HİZMETLER",
+    "contact": "İLETİŞİM"
+  },
+  "home": {
+    "hero": {
+      "badge": "Dijital Çözüm Ortağınız",
+      "title": "Markanızı Dijitalde Güçlendirin",
+      "subtitle": "WebFine, işletmeniz için modern, hızlı ve güvenilir web çözümleri sunar. Tasarımdan yayına, her şey tek pakette.",
+      "cta": "Ücretsiz Danışmanlık Al"
+    },
+    "why": {
+      "title": "Neden WebFine?",
+      "desc": "Küçük ve orta ölçekli işletmeler için profesyonel, hızlı ve güvenilir web çözümleri sunuyoruz. Teknik detaylarla siz uğraşmazsınız.",
+      "security": "Güvenli Altyapı",
+      "securityDesc": "SSL sertifikası, temel güvenlik kurulumları ve korumalı yapı.",
+      "storage": "Düzenli Yedekleme",
+      "storageDesc": "Verileriniz düzenli aralıklarla yedeklenir ve güvenle saklanır.",
+      "speed": "Hızlı Yayın",
+      "speedDesc": "Domain + Hosting + Site: Ortalama 3 iş gününde yayında.",
+      "support": "Sürekli Destek",
+      "supportDesc": "WhatsApp ve telefon üzerinden 7/24 hızlı destek.",
+      "uptime": "Uptime Garantisi"
+    },
+    "packages": {
+      "title": "Her İşletmeye Uygun Web Paketleri",
+      "subtitle": "Domain, hosting, kurumsal e-posta, web tasarımı ve bakım – hepsi tek pakette. Size en uygun planı seçin.",
+      "notice": "",
+      "whoIsItFor": "Kimler İçin Uygun?",
+      "featured": "Önerilen",
+      "content": "Paket İçeriği:",
+      "starter": {
+        "title": "Starter Paket",
+        "badge": "Başlangıç",
+        "price": "",
+        "desc": "Yeni başlayan işletmeler için hızlı ve ekonomik dijital başlangıç.",
+        "who": "Küçük işletmeler ve bireysel girişimler.",
+        "bullets": [
+          "Hosting (1 yıl)",
+          "1 Domain (.com / .com.tr)",
+          "5 Kurumsal E-Posta",
+          "3 Sayfaya Kadar Web Sitesi (Anasayfa, Hakkımızda, İletişim)",
+          "Mobil uyumlu tasarım",
+          "SSL Sertifikası",
+          "İletişim Formu + WhatsApp Butonu",
+          "Temel SEO kurulumu",
+          "1 Yıl Bakım & Güncelleme"
+        ],
+        "cta": "DETAY AL"
+      },
+      "business": {
+        "title": "Business Paket",
+        "badge": "En Popüler",
+        "price": "",
+        "desc": "Kurumsal görünüm ve profesyonel dijital vitrin isteyenler için.",
+        "who": "KOBİ’ler ve profesyonel işletmeler.",
+        "bullets": [
+          "Hosting (1 yıl)",
+          "1 Domain (.com / .com.tr)",
+          "5 Kurumsal E-Posta",
+          "6 Sayfaya Kadar Web Sitesi (Hakkımızda, Hizmetler, Galeri, Blog, İletişim)",
+          "Elementor Pro + Premium Tasarım",
+          "Mobil uyumlu tasarım",
+          "SSL Sertifikası",
+          "İletişim Formu + WhatsApp Butonu",
+          "SEO kurulumu",
+          "Google Analytics entegrasyonu",
+          "1 Yıl Bakım & Güncelleme"
+        ],
+        "cta": "KEŞFET"
+      },
+      "professional": {
+        "title": "Professional Paket",
+        "badge": "Kurumsal",
+        "price": "",
+        "desc": "Kapsamlı, güçlü ve ölçeklenebilir dijital çözümler.",
+        "who": "Büyümeyi hedefleyen işletmeler.",
+        "bullets": [
+          "Hosting (1 yıl)",
+          "1 Domain (.com / .com.tr)",
+          "10 Kurumsal E-Posta",
+          "10 Sayfaya Kadar Web Sitesi (Blog, SSS, ekstra sayfalar dahil)",
+          "Elementor Pro + Premium Tasarım",
+          "Mobil uyumlu & hız optimize",
+          "SSL Sertifikası",
+          "İletişim Formu + WhatsApp Butonu",
+          "SEO kurulumu",
+          "Google Analytics & Search Console",
+          "1 Yıl Bakım & Güncelleme"
+        ],
+        "cta": "TEKLİF AL"
+      }
+    },
+    "offerings": {
+      "title": "Neler Sunuyoruz?",
+      "desc": "WebFine ile işletmenizin dijital dünyada ihtiyaç duyduğu tüm çözümleri tek noktadan sunuyoruz.",
+      "domain": {
+        "title": "Domain & Hosting",
+        "desc": "Hızlı, güvenilir ve ölçeklenebilir altyapı.",
+        "bullets": [
+          "Yıllık domain kaydı",
+          "Yüksek performanslı hosting"
+        ]
+      },
+      "design": {
+        "title": "Modern Web Tasarım",
+        "desc": "Markanıza özel, şık ve mobil uyumlu tasarımlar.",
+        "bullets": [
+          "Elementor Pro",
+          "Premium şablonlar"
+        ]
+      },
+      "email": {
+        "title": "Kurumsal E-Posta",
+        "desc": "Markanıza güven katan kurumsal e-posta adresleri.",
+        "bullets": [
+          "info@firmaniz.com",
+          "Kurumsal e-posta hesapları"
+        ]
+      },
+      "seo": {
+        "title": "SEO & Google Entegrasyonu",
+        "desc": "Google’da daha görünür olun, müşterileriniz sizi daha kolay bulsun.",
+        "bullets": [
+          "Temel SEO optimizasyonu",
+          "Google Analytics & Search Console"
+        ]
+      },
+      "security": {
+        "title": "Bakım & Güvenlik",
+        "desc": "Siteniz güncel, güvenli ve sorunsuz çalışır.",
+        "bullets": [
+          "SSL Sertifikası",
+          "Yedekleme & temel güvenlik katmanı"
+        ]
+      },
+      "contact": {
+        "title": "Kolay İletişim",
+        "desc": "Ziyaretçileriniz size anında ulaşsın.",
+        "bullets": [
+          "WhatsApp butonu",
+          "İletişim formu"
+        ]
+      }
+    },
+    "steps": {
+      "title": "3 Adımda Web Siteniz Yayında",
+      "subtitle": "Zahmetsiz, hızlı ve profesyonel.",
+      "step1": {
+        "title": "Alan Adı Seçimi",
+        "desc": "Markanıza en uygun domaini birlikte belirliyoruz."
+      },
+      "step2": {
+        "title": "Tasarım & İçerik",
+        "desc": "Sektörünüze özel premium tasarım ve içerik yerleşimini hazırlıyoruz."
+      },
+      "step3": {
+        "title": "Kurulum & Yayın",
+        "desc": "Web sitenizi hızlıca kuruyor ve yayına alıyoruz."
+      }
+    },
+    "finalCta": {
+      "title": "Dijital Geleceğinizi <br /> Birlikte <br /> İnşa Edelim",
+      "button": "Hemen İletişime Geçin"
+    }
+  },
+  "services": {
+    "page": {
+      "title": "Tüm Çözümlerimiz <br /> Tek Bir Çatı Altında",
+      "desc": "İşletmenizin dijital kimliğini, güvenliğini ve hızını destekleyen profesyonel ekosistemimizi keşfedin.",
+      "solutionsSuffix": "Çözümleri",
+      "startProject": "Projeye Başlayın",
+      "ecosystem": {
+        "title": "Ekosisteme Katılın",
+        "desc": "Domain’den tasarıma, hosting’ten güvenliğe kadar her şey tek yerde. Karmaşıklığa veda edin.",
+        "button": "Hemen Randevu Alın"
+      }
+    },
+    "domain": {
+      "title": "Domain",
+      "desc": "Markanıza uygun alan adını tescil edelim.",
+      "features": [
+        "Ücretsiz DNS Yönetimi",
+        ".com / .com.tr / .net",
+        "Güvenli Transfer",
+        "Otomatik Yenileme"
+      ]
+    },
+    "hosting": {
+      "title": "Hosting",
+      "desc": "Hızlı ve güvenilir hosting altyapısı.",
+      "features": [
+        "%99.9 Uptime",
+        "Günlük Yedekleme",
+        "LiteSpeed Sunucu",
+        "Ücretsiz SSL",
+        "DDoS Koruması"
+      ]
+    },
+    "webDesign": {
+      "title": "Web Tasarım",
+      "desc": "Modern, mobil uyumlu ve dönüşüm odaklı tasarım.",
+      "features": [
+        "UX/UI Tasarım",
+        "Mobil Uyumlu",
+        "SEO Uyumlu",
+        "Modern Teknolojiler",
+        "İnteraktif Öğeler"
+      ]
+    }
+  },
+  "about": {
+    "heroDesc": "WebFine, işletmelerin dijitalde büyümesi için modern tasarım ve güvenilir altyapıyı birleştiren bir web çözüm ajansıdır.",
+    "philosophyTitle": "Dijitalde Güçlü Bir Vitrin Oluşturuyoruz",
+    "philosophyDesc": "Her projeye butik yaklaşırız. Amacımız yalnızca bir web sitesi yapmak değil; markanızın dijitalde güven veren yüzünü inşa etmektir.",
+    "vision": {
+      "title": "Vizyonumuz",
+      "desc": "Küçük ve orta ölçekli işletmelerin dijitalde güçlü görünmesini sağlayacak erişilebilir ve kaliteli çözümler sunmak."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "desc": "Teknik karmaşıklığı ortadan kaldırarak, hızlı, şeffaf ve güvenilir bir web hizmeti deneyimi yaşatmak."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "desc": "Şeffaflık, kalite, hız ve müşteri memnuniyeti. Her projede bu değerleri yaşatıyoruz."
+    },
+    "perks": [
+      "Hızlı Yayın Süreci",
+      "Modern Teknoloji Altyapısı",
+      "Premium Tasarım Standartları",
+      "WhatsApp Üzerinden Hızlı Destek"
+    ],
+    "trustedPartner": "Web Çözümleri"
+  },
+  "contact": {
+    "title": "Projenizi Konuşalım",
+    "subtitle": "Bir sorunuz mu var, yoksa yeni bir proje mi planlıyorsunuz?",
+    "desc": "Ekibimiz, ihtiyacınıza en uygun çözümü hızlıca planlamak için burada. Bize yazın, en geç 24 saat içinde dönüş yapalım.",
+    "helpTitle": "Size Nasıl Yardımcı Olabiliriz?",
+    "social": "Sosyal Medya",
+    "location": "Konum",
+    "info": {
+      "title": "İletişim Bilgileri",
+      "phone": "+90 551 521 59 58",
+      "email": "info@webfine.com.tr",
+      "address": "İstanbul, Türkiye"
+    },
+    "form": {
+      "nameLabel": "Ad Soyad",
+      "emailLabel": "E-posta Adresi",
+      "messageLabel": "Mesajınız",
+      "messagePlaceholder": "Kısaca ihtiyacınızdan bahsedin...",
+      "submit": "Mesajı Gönder",
+      "success": "Teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.",
+      "reset": "YENİ MESAJ"
+    }
+  },
+  "projects": {
+    "heroTitle": "Projelerimiz",
+    "heroDesc": "Özenle tasarladığımız web projeleriyle markaların dijitalde güçlü görünmesini sağlıyoruz.",
+    "viewProject": "Projeyi İncele",
+    "ctaTitle": "Sıradaki Başarı Hikayesi Sizin Olsun",
+    "ctaButton": "Hemen Başlayalım",
+    "categories": {
+      "webDev": "Web Geliştirme",
+      "ecommerce": "E-Ticaret / Kurumsal",
+      "corpIdentity": "Kurumsal Kimlik",
+      "servicePortal": "Hizmet Portalı"
+    }
+  },
+  "footer": {
+    "desc": "WebFine, modern web teknolojileri ile işletmenizi dijitalde güçlendirir.",
+    "copyright": "© 2026 WebFine. Tüm hakları saklıdır.",
+    "links": {
+      "services": "Hizmetler",
+      "legal": "Kurumsal",
+      "contact": "İletişim"
+    },
+    "legal": {
+      "cookies": "Çerez Politikası",
+      "kvkk": "KVKK Metni",
+      "privacy": "Gizlilik Politikası"
+    }
+  },
+  "legalPages": {
+    "cookies": {
+      "title": "Çerez Politikası",
+      "content": "WebFine olarak, web sitemizde size en iyi deneyimi sunmak için çerezleri kullanıyoruz.\n\n### Çerez Nedir?\nÇerezler, ziyaret ettiğiniz web siteleri tarafından bilgisayarınıza veya mobil cihazınıza bırakılan küçük metin dosyalarıdır.\n\n### Çerezleri Nasıl Kullanıyoruz?\n- **Zorunlu Çerezler:** Sitemizin temel işlevlerini yerine getirmek için gereklidir.\n- **Analitik Çerezler:** Web sitemizi nasıl kullandığınızı anlamamıza yardımcı olur.\n- **Fonksiyonel Çerezler:** Tercihlerinizi hatırlamamızı sağlar.\n\n### Çerezleri Nasıl Kontrol Edebilirsiniz?\nTarayıcı ayarlarınızdan çerezleri engelleyebilir veya silebilirsiniz."
+    },
+    "kvkk": {
+      "title": "KVKK Metni",
+      "content": "Kişisel verilerinizin korunması WebFine için bir önceliktir.\n\n### Veri Sorumlusu\n6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca, kişisel verileriniz WebFine tarafından veri sorumlusu sıfatıyla işlenebilir.\n\n### Veri İşleme Amaçları\n- Hizmetlerimizin sunulması ve iyileştirilmesi\n- İletişim faaliyetlerinin yürütülmesi\n- Yasal yükümlülüklerin yerine getirilmesi\n\n### Haklarınız\nKVKK’nın 11. maddesi uyarınca verilerinize erişme, düzeltme ve silme hakkına sahipsiniz."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası",
+      "content": "Gizliliğiniz bizim için önemlidir.\n\n### Topladığımız Bilgiler\nSitemizi ziyaret ettiğinizde, iletişim formu doldurduğunuzda veya hizmetlerimizi kullandığınızda bazı kişisel bilgileriniz toplanabilir.\n\n### Bilgi Güvenliği\nVerilerinizi yetkisiz erişime karşı korumak için güncel güvenlik önlemleri uygularız.\n\n### Üçüncü Taraflar\nKişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz."
+    }
+  }
+}
