@@ -93,36 +93,43 @@ export default async function Services({ params }: { params: Promise<{ lang: str
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     {services.map((service, i) => (
                         <div key={service.id} id={service.id} className={cn(
-                            "grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-center scroll-mt-32 relative py-20 md:py-0 md:min-h-screen md:flex md:justify-center snap-start",
+                            "grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-center scroll-mt-32 relative py-12 md:py-0 md:min-h-screen md:flex md:items-center md:justify-center snap-start",
                             i % 2 === 1 ? "lg:flex-row-reverse" : ""
                         )}>
                             <div className={cn(
-                                "lg:col-span-6 space-y-12 w-full",
+                                "lg:col-span-6 space-y-6 md:space-y-8 w-full relative z-20",
                                 i % 2 === 1 ? "lg:order-2" : "lg:order-1"
                             )}>
                                 <div className="inline-flex items-center space-x-3 text-brand-primary font-black uppercase tracking-[0.3em] text-xs">
                                     <service.icon className="w-5 h-5" />
                                     <span>{service.title}</span>
                                 </div>
-                                <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-[0.9] text-white break-words">{service.title} <br className="hidden md:block" /> {dictionary.services.page.solutionsSuffix}</h2>
-                                <p className="text-lg md:text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">{service.desc}</p>
+                                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-[0.95] text-white break-words">
+                                    {service.title} <br className="hidden md:block" />
+                                    <span className="text-2xl md:text-4xl opacity-30 font-bold block mt-2">{dictionary.services.page.solutionsSuffix}</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-xl">{service.desc}</p>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                                     {service.features.map((f: string, idx: number) => (
                                         <div key={idx} className="flex items-center space-x-3 group">
-                                            <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-all flex-shrink-0">
-                                                <CheckCircle2 className="w-4 h-4 text-brand-primary" />
+                                            <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-all flex-shrink-0">
+                                                <CheckCircle2 className="w-3.5 h-3.5 text-brand-primary" />
                                             </div>
-                                            <span className="font-bold text-gray-400 group-hover:text-white transition-colors">{f}</span>
+                                            <span className="font-bold text-sm text-gray-400 group-hover:text-white transition-colors">{f}</span>
                                         </div>
                                     ))}
                                 </div>
 
                                 <Link
-                                    href={`/${lang}/iletisim`}
-                                    className="inline-flex items-center space-x-4 bg-white text-luxury-black px-12 py-6 rounded-2xl font-black hover:bg-brand-primary hover:text-white transition-all group mt-8"
+                                    href={service.id === 'domain' ? `/${lang}#sorgula` : `/${lang}/iletisim`}
+                                    className="inline-flex items-center space-x-4 bg-white text-luxury-black px-10 py-4 rounded-2xl font-black hover:bg-brand-primary hover:text-white transition-all group mt-4 relative z-30 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:shadow-brand-primary/40 active:scale-95"
                                 >
-                                    <span>{dictionary.services.page.startProject}</span>
+                                    <span>
+                                        {service.id === 'domain'
+                                            ? dictionary.home.domainSearch.badge
+                                            : dictionary.services.page.startProject}
+                                    </span>
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                                 </Link>
                             </div>
@@ -133,17 +140,29 @@ export default async function Services({ params }: { params: Promise<{ lang: str
                             )}>
                                 <div className="aspect-[4/3] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden bg-white/5 border border-white/10 p-4 relative group hover:rotate-1 transition-transform duration-700 ease-out">
                                     <div className="w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay z-10"></div>
-                                        <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0" />
+                                        {service.id === 'web-tasarim' ? (
+                                            <video
+                                                autoPlay
+                                                muted
+                                                loop
+                                                playsInline
+                                                className="w-full h-full object-cover"
+                                            >
+                                                <source src="/img/Web Design.mov" type="video/quicktime" />
+                                                <source src="/img/Web Design.mov" type="video/mp4" />
+                                            </video>
+                                        ) : (
+                                            <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                                        )}
                                     </div>
 
-                                    <div className="absolute top-1/4 -right-12 glass-morphism p-6 rounded-3xl border border-white/20 shadow-2xl animate-float z-20">
-                                        <Database className="w-10 h-10 text-brand-primary" />
+                                    <div className="absolute top-8 right-8 glass-morphism p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/20 shadow-2xl animate-float z-20">
+                                        <Database className="w-8 h-8 md:w-10 md:h-10 text-brand-primary" />
                                     </div>
-                                    <div className="absolute -bottom-8 left-12 glass-morphism p-6 rounded-3xl border border-white/20 shadow-2xl animate-float-delayed z-20">
-                                        {i === 0 && <Monitor className="w-10 h-10 text-blue-400" />}
-                                        {i === 1 && <Cloud className="w-10 h-10 text-indigo-400" />}
-                                        {i === 2 && <Globe className="w-10 h-10 text-amber-400" />}
+                                    <div className="absolute bottom-8 left-8 glass-morphism p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/20 shadow-2xl animate-float-delayed z-20">
+                                        {i === 0 && <Monitor className="w-8 h-8 md:w-10 md:h-10 text-blue-400" />}
+                                        {i === 1 && <Cloud className="w-8 h-8 md:w-10 md:h-10 text-indigo-400" />}
+                                        {i === 2 && <Globe className="w-8 h-8 md:w-10 md:h-10 text-amber-400" />}
                                     </div>
                                 </div>
                             </div>

@@ -63,7 +63,7 @@ export default async function BlogPostPage({
                     <div className="flex items-center space-x-4 text-xs font-bold uppercase tracking-widest text-brand-primary">
                         <span>{post.category}</span>
                         <span className="w-1 h-1 rounded-full bg-white/20" />
-                        <span className="text-gray-500 flex items-center italic">
+                        <span className="text-gray-400 flex items-center italic">
                             <Calendar className="w-3 h-3 mr-1" /> {post.date}
                         </span>
                     </div>
@@ -78,7 +78,7 @@ export default async function BlogPostPage({
                         </div>
                         <div>
                             <div className="text-xs font-black uppercase tracking-widest">{post.author}</div>
-                            <div className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">WebFine Expert</div>
+                            <div className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">WebFine Expert</div>
                         </div>
                     </div>
                 </header>

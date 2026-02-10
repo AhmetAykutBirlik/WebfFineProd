@@ -34,25 +34,32 @@ export default async function WebDesign({ params }: { params: Promise<{ lang: st
                     <div className="lg:col-span-8 space-y-20">
                         <div className="space-y-8">
                             <h2 className="text-5xl font-black text-luxury-black tracking-tighter">İşletmenize Özel Modern Web Tasarımı</h2>
-                            <p className="text-xl text-gray-500 font-medium leading-relaxed">Sadece güzel görünen değil, aynı zamanda hedef kitlenizi etkileyen ve satışlarınıza katkı sağlayan performans odaklı web siteleri tasarlıyoruz.</p>
+                            <p className="text-xl text-gray-600 font-medium leading-relaxed">Sadece güzel görünen değil, aynı zamanda hedef kitlenizi etkileyen ve satışlarınıza katkı sağlayan performans odaklı web siteleri tasarlıyoruz.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <div className="space-y-6 p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100">
                                 <h4 className="text-2xl font-black text-luxury-black italic underline decoration-brand-primary decoration-4">UX/UI Design</h4>
-                                <p className="text-gray-500 font-medium">Kullanıcı deneyimini en üst seviyede tutan, sezgisel ve etkileyici arayüzler tasarlıyoruz.</p>
+                                <p className="text-gray-600 font-medium">Kullanıcı deneyimini en üst seviyede tutan, sezgisel ve etkileyici arayüzler tasarlıyoruz.</p>
                             </div>
                             <div className="space-y-6 p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100">
                                 <h4 className="text-2xl font-black text-luxury-black italic underline decoration-brand-primary decoration-4">Responsive</h4>
-                                <p className="text-gray-500 font-medium">Siteniz tüm cihazlarda (mobil, tablet, desktop) kusursuz ve hızlı çalışır.</p>
+                                <p className="text-gray-600 font-medium">Siteniz tüm cihazlarda (mobil, tablet, desktop) kusursuz ve hızlı çalışır.</p>
                             </div>
                         </div>
 
                         <div className="aspect-[16/9] rounded-[3rem] bg-gray-100 overflow-hidden shadow-2xl relative group">
-                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80" alt="Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <p className="text-white text-3xl font-black tracking-tighter flex items-center">Portfolyomuzu İncele <MoveRight className="ml-4 w-10 h-10" /></p>
-                            </div>
+                            <video
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="w-full h-full object-cover"
+                            >
+                                <source src="/img/Web Design.mov" type="video/quicktime" />
+                                <source src="/img/Web Design.mov" type="video/mp4" />
+                                Tarayıcınız video etiketini desteklemiyor.
+                            </video>
                         </div>
                     </div>
 
@@ -69,7 +76,7 @@ export default async function WebDesign({ params }: { params: Promise<{ lang: st
                             <h4 className="text-xl font-black text-luxury-black">Neden Biz?</h4>
                             <ul className="space-y-4">
                                 {["A+ Tasarım Kalitesi", "Modern Tech Stack", "SEO Dostu Yapı", "Hızlı Teslimat"].map((item, i) => (
-                                    <li key={i} className="flex items-center space-x-3 font-bold text-gray-500">
+                                    <li key={i} className="flex items-center space-x-3 font-bold text-gray-600">
                                         <div className="w-1.5 h-1.5 bg-brand-primary rounded-full"></div>
                                         <span>{item}</span>
                                     </li>

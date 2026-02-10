@@ -188,6 +188,25 @@
                 "desc": "Domain + Hosting + Website launch in just 3 business days."
             }
         },
+        "domainSearch": {
+            "badge": "Domain Search",
+            "title": "Check Your <br /> <span class=\"text-brand-primary\">Digital Identity Now</span>",
+            "desc": "Find the most suitable domain for your brand in seconds. Let's list the results with all popular extensions.",
+            "subBadge": "Popular Extensions Listed Automatically",
+            "placeholder": "domain.com",
+            "button": "Check",
+            "searching": "Checking...",
+            "available": "available!",
+            "taken": "taken.",
+            "availableDesc": "Contact us now for registration/setup.",
+            "takenDesc": "Try alternative extensions: .net .org .com.tr",
+            "error": "Please enter a valid domain.",
+            "apiError": "Currently unable to search, contact via WhatsApp.",
+            "waButton": "Chat on WhatsApp",
+            "waMessage": "Hello, I need support regarding my domain search result:",
+            "emptyState": "Enter a domain name above to search",
+            "guarantee": "Guaranteed Registration"
+        },
         "finalCta": {
             "title": "Let's Design <br /> The Future <br /> Together",
             "button": "Get In Touch"

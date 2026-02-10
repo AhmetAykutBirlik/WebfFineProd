@@ -45,7 +45,7 @@ export default async function BlogPage({
                                 <div className="flex items-center space-x-4 text-xs font-bold uppercase tracking-widest text-brand-primary">
                                     <span>{post.category}</span>
                                     <span className="w-1 h-1 rounded-full bg-white/20" />
-                                    <span className="text-gray-500 flex items-center">
+                                    <span className="text-gray-400 flex items-center">
                                         <Calendar className="w-3 h-3 mr-1" /> {post.date}
                                     </span>
                                 </div>
@@ -54,7 +54,7 @@ export default async function BlogPage({
                                     {post.title}
                                 </h2>
 
-                                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
+                                <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
                                     {post.excerpt}
                                 </p>
 

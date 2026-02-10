@@ -46,7 +46,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                 scrolled ? "glass-morphism-navbar shadow-2xl py-2 px-6 md:px-10 border-white/25" : "bg-white/5 backdrop-blur-2xl py-3 px-6 md:px-10 border-white/10"
             )}>
                 <div className="flex justify-between items-center w-full">
-                    <Link href={`/${lang}`} className="flex items-center space-x-2 group">
+                    <Link href={`/${lang}`} className="flex items-center space-x-2 group" aria-label="WebFine Home">
                         <span className="text-2xl md:text-4xl font-black tracking-tighter text-white logo-glow py-2 select-none">
                             WEB<span className="text-brand-primary">FINE</span>
                         </span>
@@ -77,15 +77,16 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                         <button
                             onClick={toggleLanguage}
                             className="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center space-x-3 text-[10px] font-black hover:bg-white/10 hover:border-brand-primary/40 hover:scale-105 transition-all active:scale-95 group shadow-lg shadow-black/20"
+                            aria-label={lang === 'tr' ? 'Switch to English' : 'Türkçe\'ye geç'}
                         >
                             {lang === 'tr' ? (
                                 <>
-                                    <img src="https://flagcdn.com/w40/tr.png" alt="TR" className="w-5 h-auto rounded-sm" />
+                                    <img src="https://flagcdn.com/w40/tr.png" alt="Turkish Flag" className="w-5 h-auto rounded-sm" />
                                     <span className="text-white tracking-[0.2em]">TR</span>
                                 </>
                             ) : (
                                 <>
-                                    <img src="https://flagcdn.com/w40/gb.png" alt="EN" className="w-5 h-auto rounded-sm" />
+                                    <img src="https://flagcdn.com/w40/gb.png" alt="British Flag" className="w-5 h-auto rounded-sm" />
                                     <span className="text-white tracking-[0.2em]">EN</span>
                                 </>
                             )}
@@ -96,10 +97,11 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                         <button
                             onClick={toggleLanguage}
                             className="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center space-x-2"
+                            aria-label={lang === 'tr' ? 'Switch to English' : 'Türkçe\'ye geç'}
                         >
                             <img
                                 src={lang === 'tr' ? "https://flagcdn.com/w40/tr.png" : "https://flagcdn.com/w40/gb.png"}
-                                alt={lang}
+                                alt={lang === 'tr' ? 'Turkish Flag' : 'British Flag'}
                                 className="w-4 h-auto rounded-sm"
                             />
                             <span className="text-[10px] font-black text-white uppercase">{lang}</span>
@@ -107,6 +109,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="p-2 text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors"
+                            aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
                         >
                             {isOpen ? <X className="w-5 h-5 md:w-8 md:h-8" /> : <Menu className="w-5 h-5 md:w-8 md:h-8" />}
                         </button>
@@ -122,7 +125,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                         exit={{ opacity: 0, x: 100 }}
                         className="fixed inset-0 z-40 md:hidden bg-luxury-black/98 backdrop-blur-3xl p-8 flex flex-col justify-center"
                     >
-                        <button onClick={() => setIsOpen(false)} className="absolute top-10 right-10 text-white"><X className="w-10 h-10" /></button>
+                        <button onClick={() => setIsOpen(false)} className="absolute top-10 right-10 text-white" aria-label="Close Menu"><X className="w-10 h-10" /></button>
                         <div className="space-y-8 text-center">
                             {navItems.map((item) => (
                                 <Link

@@ -31,7 +31,7 @@ export default async function Domain({ params }: { params: Promise<{ lang: strin
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                     <div className="space-y-6">
                         <h2 className="text-3xl font-black text-luxury-black">Profesyonel Alan Adı Yönetimi</h2>
-                        <p className="text-gray-500 text-lg leading-relaxed">İşletmenizin dijital kimliğinin temeli olan alan adını sizin adınıza tescil ediyor, DNS yönetimi ve yenileme süreçlerini profesyonelce takip ediyoruz.</p>
+                        <p className="text-gray-600 text-lg leading-relaxed">İşletmenizin dijital kimliğinin temeli olan alan adını sizin adınıza tescil ediyor, DNS yönetimi ve yenileme süreçlerini profesyonelce takip ediyoruz.</p>
                         <ul className="space-y-4">
                             {["Anında Tescil", "Ücretsiz DNS Yönetimi", ".com, .com.tr, .net ve daha fazlası", "Güvenli Transfer"].map((item, i) => (
                                 <li key={i} className="flex items-center space-x-3 font-bold text-luxury-black">

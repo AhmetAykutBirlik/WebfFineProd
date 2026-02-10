@@ -188,8 +188,27 @@
         "desc": "Web sitenizi hızlıca kuruyor ve yayına alıyoruz."
       }
     },
+    "domainSearch": {
+      "badge": "Domain Sorgulama",
+      "title": "Dijital Kimliğinizi <br /> <span class=\"text-brand-primary\">Hemen Sorgulayın</span>",
+      "desc": "Markanıza en uygun alan adını saniyeler içinde bulun. Popüler tüm uzantılarla birlikte sonuçları listeleyelim.",
+      "subBadge": "Popüler Uzantılar Otomatik Listelenir",
+      "placeholder": "alanadi.com",
+      "button": "Sorgula",
+      "searching": "Sorgulanıyor...",
+      "available": "müsait!",
+      "taken": "dolu.",
+      "availableDesc": "Hemen kayıt/kurulum için bize yazın.",
+      "takenDesc": "Alternatif uzantıları deneyin: .net .org .com.tr",
+      "error": "Lütfen geçerli bir domain girin.",
+      "apiError": "Şu an sorgu yapılamıyor, WhatsApp’tan yazın.",
+      "waButton": "WhatsApp’tan yaz",
+      "waMessage": "Merhaba, domain sorgulama sonucumla ilgili destek istiyorum:",
+      "emptyState": "Arama yapmak için yukarıya bir alan adı girin",
+      "guarantee": "Garantili Kayıt"
+    },
     "finalCta": {
-      "title": "Dijital Geleceğinizi <br /> Birlikte <br /> İnşa Edelim",
+      "title": "Dijital Geleceğinizi Birlikte <br /> İnşa Edelim",
       "button": "Hemen İletişime Geçin"
     }
   },

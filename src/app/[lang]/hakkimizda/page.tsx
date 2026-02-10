@@ -1,6 +1,7 @@
 import { getDictionary } from "@/lib/i18n";
 import { CheckCircle2, Award, Zap, Users } from "lucide-react";
 import { Metadata } from "next";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export async function generateMetadata({
     params,
@@ -60,24 +61,28 @@ export default async function About({ params }: { params: Promise<{ lang: string
                         </div>
 
                         <div className="space-y-12">
-                            <div className="space-y-6">
+                            <ScrollReveal className="space-y-6">
                                 <h2 className="text-xs font-black text-brand-primary uppercase tracking-[0.5em]">{dictionary.home.why.title}</h2>
                                 <h3 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-tight">
                                     {dictionary.about.philosophyTitle}
                                 </h3>
-                            </div>
-                            <p className="text-xl text-gray-500 font-medium leading-relaxed">
-                                {dictionary.about.philosophyDesc}
-                            </p>
+                            </ScrollReveal>
+                            <ScrollReveal delay={0.2}>
+                                <p className="text-xl text-gray-400 font-medium leading-relaxed">
+                                    {dictionary.about.philosophyDesc}
+                                </p>
+                            </ScrollReveal>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 {dictionary.about.perks.map((item: string, i: number) => (
-                                    <div key={i} className="flex items-center space-x-4 text-white font-bold group">
-                                        <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary transition-colors">
-                                            <CheckCircle2 className="text-brand-primary group-hover:text-white w-5 h-5" />
+                                    <ScrollReveal key={i} delay={0.3 + (i * 0.1)}>
+                                        <div className="flex items-center space-x-4 text-white font-bold group">
+                                            <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary transition-colors">
+                                                <CheckCircle2 className="text-brand-primary group-hover:text-white w-5 h-5" />
+                                            </div>
+                                            <span className="text-lg tracking-tight uppercase text-[12px]">{item}</span>
                                         </div>
-                                        <span className="text-lg tracking-tight uppercase text-[12px]">{item}</span>
-                                    </div>
+                                    </ScrollReveal>
                                 ))}
                             </div>
                         </div>
@@ -85,59 +90,37 @@ export default async function About({ params }: { params: Promise<{ lang: string
                 </div>
             </section>
 
-            {/* Mission / Vision Cards */}
-            {/* Mission / Vision Cards - Luxury & Elite Redesign */}
-            <section className="py-20 md:py-0 min-h-screen flex items-center relative overflow-hidden">
-                <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
-                <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -z-10 animate-pulse delay-700"></div>
+            {/* Mission / Vision / Values - Minimalist & Elite */}
+            <section className="py-20 md:py-32 relative overflow-hidden">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid pointer-events-none -z-20"></div>
+                <div className="absolute top-1/4 right-[10%] w-[400px] h-[400px] bg-brand-primary/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+                <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[100px] -z-10 animate-pulse delay-700"></div>
 
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10">
-                    {/* Vision Card */}
-                    <div className="group p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-brand-primary/40 transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_20px_60px_-15px_rgba(0,102,255,0.2)] relative overflow-hidden h-full">
-                        <div className="absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        <div className="relative z-10 space-y-8">
-                            <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                                <Zap className="text-brand-primary w-10 h-10 group-hover:animate-pulse" />
-                            </div>
-                            <h4 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 group-hover:to-brand-primary transition-all duration-500">
-                                {dictionary.about.vision.title}
-                            </h4>
-                            <p className="text-gray-400 group-hover:text-gray-300 font-medium leading-relaxed text-lg transition-colors border-l-2 border-white/10 pl-6 group-hover:border-brand-primary/50">
-                                {dictionary.about.vision.desc}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Mission Card */}
-                    <div className="group p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-400/40 transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_20px_60px_-15px_rgba(96,165,250,0.2)] relative overflow-hidden h-full">
-                        <div className="absolute inset-0 bg-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        <div className="relative z-10 space-y-8">
-                            <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                                <Users className="text-blue-400 w-10 h-10 group-hover:animate-bounce-subtle" />
-                            </div>
-                            <h4 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 group-hover:to-blue-400 transition-all duration-500">
-                                {dictionary.about.mission.title}
-                            </h4>
-                            <p className="text-gray-400 group-hover:text-gray-300 font-medium leading-relaxed text-lg transition-colors border-l-2 border-white/10 pl-6 group-hover:border-blue-400/50">
-                                {dictionary.about.mission.desc}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Values Card */}
-                    <div className="group p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-indigo-400/40 transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_20px_60px_-15px_rgba(129,140,248,0.2)] relative overflow-hidden h-full">
-                        <div className="absolute inset-0 bg-indigo-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        <div className="relative z-10 space-y-8">
-                            <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                                <CheckCircle2 className="text-indigo-400 w-10 h-10 group-hover:rotate-12 transition-transform" />
-                            </div>
-                            <h4 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 group-hover:to-indigo-400 transition-all duration-500">
-                                {dictionary.about.values.title}
-                            </h4>
-                            <p className="text-gray-400 group-hover:text-gray-300 font-medium leading-relaxed text-lg transition-colors border-l-2 border-white/10 pl-6 group-hover:border-indigo-400/50">
-                                {dictionary.about.values.desc}
-                            </p>
-                        </div>
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                        {[
+                            { title: dictionary.about.vision.title, desc: dictionary.about.vision.desc, icon: Zap },
+                            { title: dictionary.about.mission.title, desc: dictionary.about.mission.desc, icon: Users },
+                            { title: dictionary.about.values.title, desc: dictionary.about.values.desc, icon: CheckCircle2 }
+                        ].map((item, i) => (
+                            <ScrollReveal key={i} delay={i * 0.1}>
+                                <div className="group relative p-8 md:p-10 rounded-[3rem] bg-white/5 border border-white/5 hover:border-brand-primary/30 transition-all duration-500 card-glow flex flex-col items-center lg:items-start text-center lg:text-left h-full">
+                                    <div className="w-16 h-16 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-primary/20 transition-all duration-500">
+                                        <item.icon className="w-8 h-8 text-brand-primary" />
+                                    </div>
+                                    <div className="space-y-4">
+                                        <h4 className="text-2xl md:text-3xl font-black tracking-tighter uppercase text-white group-hover:text-brand-primary transition-colors duration-500">
+                                            {item.title}
+                                        </h4>
+                                        <p className="text-gray-300 font-medium leading-relaxed text-sm md:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                    {/* Minimal Accent Line */}
+                                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-brand-primary rounded-full group-hover:w-12 transition-all duration-500" />
+                                </div>
+                            </ScrollReveal>
+                        ))}
                     </div>
                 </div>
             </section>

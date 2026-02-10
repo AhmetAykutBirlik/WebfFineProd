@@ -34,7 +34,7 @@ export default async function Hosting({ params }: { params: Promise<{ lang: stri
                     </div>
                     <div className="space-y-6 order-1 md:order-2">
                         <h2 className="text-3xl font-black text-luxury-black">Yüksek Performanslı Bulut Altyapısı</h2>
-                        <p className="text-gray-500 text-lg leading-relaxed">WebFine olarak, sitelerinizin her zaman hızlı ve ulaşılabilir olması için dünyanın önde gelen bulut servis sağlayıcılarını kullanıyoruz.</p>
+                        <p className="text-gray-600 text-lg leading-relaxed">WebFine olarak, sitelerinizin her zaman hızlı ve ulaşılabilir olması için dünyanın önde gelen bulut servis sağlayıcılarını kullanıyoruz.</p>
                         <ul className="space-y-4">
                             {["99.9% Uptime Garantisi", "Günlük Otomatik Yedekleme", "LiteSpeed Web Server", "Ücretsiz SSL Sertifikası"].map((item, i) => (
                                 <li key={i} className="flex items-center space-x-3 font-bold text-luxury-black">
