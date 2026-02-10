@@ -9,13 +9,13 @@ export function middleware(request: NextRequest) {
 
   // Check if the pathname is missing a locale
   const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale) => !pathname.startsWith(\/\/\) && pathname !== \/\\
   );
 
   if (pathnameIsMissingLocale) {
     // Redirect if there is no locale
     return NextResponse.redirect(
-      new URL(`/${defaultLocale}${pathname}`, request.url)
+      new URL(\/\\\, request.url)
     );
   }
 }
@@ -23,6 +23,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next, api, etc.)
-    '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|img/|robots.txt|sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|img/|robots.txt|sitemap.xml|.*\\\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
   ],
 };
