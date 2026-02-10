@@ -66,7 +66,7 @@ export default async function Home({
   return (
     <div className="bg-luxury-black min-h-screen text-white selection:bg-brand-primary/30 overflow-x-hidden">
       {/* Cinematic Hero */}
-      <section className="relative min-h-[85vh] pt-32 pb-16 md:pt-56 md:pb-32 flex flex-col items-center justify-center overflow-hidden text-white">
+      <section className="relative min-h-screen pt-32 pb-16 md:pt-56 md:pb-32 flex flex-col items-center justify-center overflow-hidden text-white">
         <div className="absolute inset-0 bg-grid pointer-events-none"></div>
         <Stars count={200} />
         <Stars count={200} />
@@ -76,7 +76,7 @@ export default async function Home({
         <div className="hidden md:block absolute bottom-[5%] right-[-5%] w-[800px] h-[800px] bg-brand-primary/30 rounded-full aurora-blur pointer-events-none blur-[120px]"></div>
         <div className="hidden md:block absolute top-[25%] right-[10%] w-[500px] h-[500px] bg-indigo-600/25 rounded-full aurora-blur pointer-events-none blur-[80px]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex flex-col items-center">
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-8 relative z-10 w-full flex flex-col items-center">
           <div className="text-center space-y-8 md:space-y-10">
             <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white text-luxury-black text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl">
               <span className="relative flex h-2 w-2 mr-3">

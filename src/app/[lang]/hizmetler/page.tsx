@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import ServiceVideo from "@/components/ServiceVideo";
 
 export async function generateMetadata({
     params,
@@ -33,6 +34,7 @@ export default async function Services({ params }: { params: Promise<{ lang: str
     const { lang } = await params;
     const dictionary = await getDictionary(lang);
 
+
     const services = [
         {
             id: "web-tasarim",
@@ -44,15 +46,6 @@ export default async function Services({ params }: { params: Promise<{ lang: str
             img: "/img/7.png"
         },
         {
-            id: "hosting",
-            title: dictionary.services.hosting.title,
-            desc: dictionary.services.hosting.desc,
-            icon: Cloud,
-            color: "indigo",
-            features: dictionary.services.hosting.features,
-            img: "/img/4.png"
-        },
-        {
             id: "domain",
             title: dictionary.services.domain.title,
             desc: dictionary.services.domain.desc,
@@ -60,32 +53,41 @@ export default async function Services({ params }: { params: Promise<{ lang: str
             color: "amber",
             features: dictionary.services.domain.features,
             img: "/img/3.png"
+        },
+        {
+            id: "hosting",
+            title: dictionary.services.hosting.title,
+            desc: dictionary.services.hosting.desc,
+            icon: Cloud,
+            color: "indigo",
+            features: dictionary.services.hosting.features,
+            img: "/img/4.png"
         }
     ];
 
     return (
         <div className="bg-luxury-black h-screen overflow-y-auto snap-y snap-mandatory text-white scroll-smooth">
             {/* Header */}
-            <section className="pt-32 pb-20 md:pt-0 md:pb-0 md:min-h-screen md:flex md:flex-col md:justify-center relative overflow-hidden snap-start">
+            <section className="pt-24 pb-12 md:pt-32 md:pb-20 relative overflow-hidden snap-start">
                 <div className="bg-shimmer-sweep" />
-                <div className="absolute top-[-10%] left-[-10%] w-[1000px] h-[1000px] extreme-vivid-aurora -z-10"></div>
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                    <div className="max-w-4xl">
-                        <div className="inline-flex items-center space-x-4 text-brand-primary font-black uppercase tracking-[0.5em] text-[10px] bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-3xl mb-10">
-                            <Zap className="w-5 h-5" />
+                <div className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] extreme-vivid-aurora -z-10 opacity-30 md:opacity-60"></div>
+                <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+                    <div className="max-w-3xl">
+                        <div className="inline-flex items-center space-x-3 text-brand-primary font-bold uppercase tracking-[0.2em] text-[10px] bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-3xl mb-6">
+                            <Zap className="w-3 h-3 md:w-4 md:h-4" />
                             <span>{dictionary.nav.services}</span>
                         </div>
                         <h1
-                            className="text-4xl md:text-7xl font-black tracking-tighter mb-8 md:mb-12 text-luxury text-gradient leading-[0.9] text-flow break-words"
+                            className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-white leading-tight break-words"
                             dangerouslySetInnerHTML={{ __html: dictionary.services.page.title }}
                         />
-                        <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-2xl leading-relaxed">
+                        <p className="text-base md:text-lg text-gray-400 font-medium max-w-xl leading-relaxed">
                             {dictionary.services.page.desc}
                         </p>
                     </div>
                 </div>
-                <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_right,rgba(0,102,255,0.15),transparent_70%)] opacity-60"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_left,rgba(0,102,255,0.12),transparent_70%)] opacity-50"></div>
+                <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_right,rgba(0,102,255,0.1),transparent_70%)] opacity-60"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_left,rgba(0,102,255,0.08),transparent_70%)] opacity-50"></div>
             </section>
 
             {/* Services List */}
@@ -94,7 +96,7 @@ export default async function Services({ params }: { params: Promise<{ lang: str
                     {services.map((service, i) => (
                         <div key={service.id} id={service.id} className={cn(
                             "grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-center scroll-mt-32 relative py-12 md:py-0 md:min-h-screen md:flex md:items-center md:justify-center snap-start",
-                            i % 2 === 1 ? "lg:flex-row-reverse" : ""
+                            ""
                         )}>
                             <div className={cn(
                                 "lg:col-span-6 space-y-6 md:space-y-8 w-full relative z-20",
@@ -141,16 +143,9 @@ export default async function Services({ params }: { params: Promise<{ lang: str
                                 <div className="aspect-[4/3] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden bg-white/5 border border-white/10 p-4 relative group hover:rotate-1 transition-transform duration-700 ease-out">
                                     <div className="w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden relative">
                                         {service.id === 'web-tasarim' ? (
-                                            <video
-                                                autoPlay
-                                                muted
-                                                loop
-                                                playsInline
-                                                className="w-full h-full object-cover"
-                                            >
-                                                <source src="/img/Web Design.mov" type="video/quicktime" />
-                                                <source src="/img/Web Design.mov" type="video/mp4" />
-                                            </video>
+                                            <ServiceVideo videoSrc="/img/Web Design.mov" title={service.title} />
+                                        ) : service.id === 'domain' ? (
+                                            <ServiceVideo videoSrc="/img/domain.mov" title={service.title} />
                                         ) : (
                                             <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                                         )}

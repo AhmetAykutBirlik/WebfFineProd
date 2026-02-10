@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, ArrowRight, Instagram, MessageCircle } from "lucid
 export default function Footer({ dictionary, lang }: { dictionary: any, lang: string }) {
     return (
         <footer className="bg-luxury-black border-t border-white/5 pt-16 md:pt-32 pb-16">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-12 md:mb-24">
                     <div className="space-y-8">
                         <Link href={`/${lang}`} className="text-3xl font-black tracking-tighter text-white">

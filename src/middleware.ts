@@ -9,13 +9,13 @@ export function middleware(request: NextRequest) {
 
   // Check if the pathname is missing a locale
   const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(\/\/\) && pathname !== \/\\
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
   if (pathnameIsMissingLocale) {
     // Redirect if there is no locale
     return NextResponse.redirect(
-      new URL(\/\\\, request.url)
+      new URL(`/${defaultLocale}${pathname}`, request.url)
     );
   }
 }
