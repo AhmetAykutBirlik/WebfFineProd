@@ -1,4 +1,5 @@
 'use client';
+// Vercel Deployment Trigger: FAQ and Usage Section Update v1.0.1
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
