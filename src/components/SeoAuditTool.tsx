@@ -515,77 +515,74 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
         )}
       </AnimatePresence>
 
-      {/* FAQ & How it Works Sections (Only shown in idle state) */}
-      {step === 'idle' && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-20 md:mt-32 space-y-20 md:space-y-32"
-        >
-          {/* How it Works */}
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
-                {t.howItWorks.title}
-              </h2>
-              <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
-            </div>
+      {/* FAQ & How it Works Sections (Always visible) */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mt-20 md:mt-32 space-y-20 md:space-y-32"
+      >
+        {/* How it Works */}
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
+              {t.howItWorks.title}
+            </h2>
+            <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
+          </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {t.howItWorks.steps.map((step: any, i: number) => (
-                <div key={i} className="glass-morphism p-8 rounded-[2rem] border border-white/5 relative overflow-hidden group">
-                  <div className="absolute -top-4 -right-4 text-8xl font-black text-white/[0.03] pointer-events-none tracking-tighter">
-                    {i + 1}
-                  </div>
-                  <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:scale-110 transition-transform">
-                    {i === 0 && <Globe className="w-6 h-6 text-brand-primary" />}
-                    {i === 1 && <Zap className="w-6 h-6 text-brand-primary" />}
-                    {i === 2 && <BarChart3 className="w-6 h-6 text-brand-primary" />}
-                  </div>
-                  <h3 className="text-lg font-black uppercase tracking-tight mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                    {step.desc}
-                  </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {t.howItWorks.steps.map((step: any, i: number) => (
+              <div key={i} className="glass-morphism p-8 rounded-[2rem] border border-white/5 relative overflow-hidden group">
+                <div className="absolute -top-4 -right-4 text-8xl font-black text-white/[0.03] pointer-events-none tracking-tighter">
+                  {i + 1}
                 </div>
-              ))}
-            </div>
+                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:scale-110 transition-transform">
+                  {i === 0 && <Globe className="w-6 h-6 text-brand-primary" />}
+                  {i === 1 && <Zap className="w-6 h-6 text-brand-primary" />}
+                  {i === 2 && <BarChart3 className="w-6 h-6 text-brand-primary" />}
+                </div>
+                <h3 className="text-lg font-black uppercase tracking-tight mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-gray-400 font-medium leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="max-w-4xl mx-auto px-4 pb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
+              {t.faq.title}
+            </h2>
+            <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
           </div>
 
-          {/* FAQ Section */}
-          <div className="max-w-4xl mx-auto px-4 pb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
-                {t.faq.title}
-              </h2>
-              <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
-            </div>
-
-            <div className="space-y-4">
-              {t.faq.questions.map((faq: any, i: number) => (
-                <details key={i} className="glass-morphism rounded-2xl border border-white/5 overflow-hidden group">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-white/[0.02] transition-colors list-none">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
-                        <HelpCircle className="w-4 h-4 text-gray-400" />
-                      </div>
-                      <span className="text-sm md:text-base font-bold text-gray-200">
-                        {faq.q}
-                      </span>
+          <div className="space-y-4">
+            {t.faq.questions.map((faq: any, i: number) => (
+              <details key={i} className="glass-morphism rounded-2xl border border-white/5 overflow-hidden group">
+                <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-white/[0.02] transition-colors list-none">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                      <HelpCircle className="w-4 h-4 text-gray-400" />
                     </div>
-                    <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" />
-                  </summary>
-                  <div className="p-6 pt-0 text-sm md:text-base text-gray-400 font-medium leading-relaxed border-t border-white/5">
-                    {faq.a}
+                    <span className="text-sm md:text-base font-bold text-gray-200">
+                      {faq.q}
+                    </span>
                   </div>
-                </details>
-              ))}
-            </div>
+                  <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="p-6 pt-0 text-sm md:text-base text-gray-400 font-medium leading-relaxed border-t border-white/5">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
-        </motion.div>
-      )
-      }
+        </div>
+      </motion.div>
     </div >
   );
 }
