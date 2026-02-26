@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Domain missing' }, { status: 400 });
     }
 
-    const ip = request.ip || request.headers.get('x-forwarded-for') || 'anonymous';
+    const ip = request.headers.get('x-forwarded-for') || 'anonymous';
     const now = Date.now();
     const limitData = rateLimitMap.get(ip) || { last: now, count: 0 };
 
