@@ -416,9 +416,47 @@
                 "critical": "0-49 Critical"
             },
             "summaryInsights": {
-                "good": "Your site is generally in good health. You can reach perfection with some minor optimizations.",
-                "warning": "There are elements causing performance loss. Improvements are recommended to rank higher on search engines.",
-                "error": "Critical errors detected. This situation negatively impacts your user volume and Google rankings."
+                "good": "Great! Your site's infrastructure is quite strong. However, professional touches always make a difference in maintaining the lead in the digital world. To perfect your score and get ahead of your competitors with our special strategies, you can contact us.",
+                "warning": "Attention! Your site has significant technical deficiencies causing performance loss and a drop in Google rankings. These issues might be negatively affecting your sales and user traffic. You can get professional support from our expert team via WhatsApp without wasting time.",
+                "error": "CRITICAL WARNING! Very serious structural errors have been detected on your website, leading to loss of traffic and customers. Your current situation endangers your digital prestige. Connect with us right now via our WhatsApp support line for urgent intervention and permanent solutions!"
+            },
+            "howItWorks": {
+                "title": "How it Works?",
+                "steps": [
+                    {
+                        "title": "Enter URL Address",
+                        "desc": "Type the full address of the website you want to analyze (e.g., www.yoursite.com) into the input field."
+                    },
+                    {
+                        "title": "Wait for AI Analysis",
+                        "desc": "Let our AI agents scan your site and calculate technical details and scores within seconds."
+                    },
+                    {
+                        "title": "Review the Report",
+                        "desc": "Analyze the detailed report containing critical errors, improvement suggestions, and your overall health score."
+                    }
+                ]
+            },
+            "faq": {
+                "title": "Frequently Asked Questions",
+                "questions": [
+                    {
+                        "q": "Is the analysis really free?",
+                        "a": "Yes, WebFine SEO Analysis tool is completely free and does not require any credit card information."
+                    },
+                    {
+                        "q": "How long does the analysis take?",
+                        "a": "The entire scanning and analysis process is completed and your report is presented within an average of 30-45 seconds."
+                    },
+                    {
+                        "q": "Which metrics are being examined?",
+                        "a": "Technical SEO (Meta tags, headings), performance (TTFB, page size), images, and general accessibility metrics are scanned."
+                    },
+                    {
+                        "q": "How can I improve my score?",
+                        "a": "You can increase your score by fixing the 'Needs Improvement' parts mentioned in the report. You can contact us for professional support."
+                    }
+                ]
             }
         },
         "meta": {

@@ -537,13 +537,13 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
-              {t.howItWorks.title}
+              {t?.howItWorks?.title || (lang === 'tr' ? 'Nasıl Çalışır?' : 'How it Works')}
             </h2>
             <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {t.howItWorks.steps.map((stepItem: any, i: number) => (
+            {t?.howItWorks?.steps?.map((stepItem: any, i: number) => (
               <div key={i} className="glass-morphism p-8 rounded-[2rem] border border-white/5 relative overflow-hidden group">
                 <div className="absolute -top-4 -right-4 text-8xl font-black text-white/[0.03] pointer-events-none tracking-tighter">
                   {i + 1}
@@ -568,13 +568,13 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
         <div className="max-w-4xl mx-auto px-4 pb-20">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4">
-              {t.faq.title}
+              {t?.faq?.title || (lang === 'tr' ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions')}
             </h2>
             <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full" />
           </div>
 
           <div className="space-y-4">
-            {t.faq.questions.map((faq: any, i: number) => (
+            {t?.faq?.questions?.map((faqItem: any, i: number) => (
               <details key={i} className="glass-morphism rounded-2xl border border-white/5 overflow-hidden group">
                 <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-white/[0.02] transition-colors list-none">
                   <div className="flex items-center space-x-4">
@@ -582,13 +582,13 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
                       <HelpCircle className="w-4 h-4 text-gray-400" />
                     </div>
                     <span className="text-sm md:text-base font-bold text-gray-200">
-                      {faq.q}
+                      {faqItem.q}
                     </span>
                   </div>
                   <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" />
                 </summary>
                 <div className="p-6 pt-0 text-sm md:text-base text-gray-400 font-medium leading-relaxed border-t border-white/5">
-                  {faq.a}
+                  {faqItem.a}
                 </div>
               </details>
             ))}
