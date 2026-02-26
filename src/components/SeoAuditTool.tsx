@@ -59,15 +59,20 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
     setProgress(0);
     setCurrentPage('');
 
+    // Abort controller for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 45000); // 45s timeout
+
     // Start Real API Call in background
     const apiPromise = fetch('http://localhost:3000/api/audit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         url: targetUrl,
-        turnstileToken: 'mock-token', // Bypassing for now or use real if widget exists
+        turnstileToken: 'mock-token',
         lang: lang
-      })
+      }),
+      signal: controller.signal
     });
 
     // Simulated progress while waiting for real results
@@ -86,6 +91,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
       if (!data.success) throw new Error(data.message);
 
       clearInterval(progressInterval);
+      clearTimeout(timeoutId);
       setProgress(100);
 
       // Map CLI results to UI format
@@ -113,7 +119,14 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
       setTimeout(() => setStep('lead-gate'), 800);
     } catch (err: any) {
       clearInterval(progressInterval);
-      alert(lang === 'tr' ? `Analiz hatası: ${err.message}` : `Analysis error: ${err.message}`);
+      clearTimeout(timeoutId);
+
+      let errorMsg = err.message;
+      if (err.name === 'AbortError') {
+        errorMsg = lang === 'tr' ? 'Sunucu yanıt vermiyor (Zaman aşımı). Lütfen API sunucusunun çalıştığından emin olun.' : 'Server not responding (Timeout). Please check if API server is running.';
+      }
+
+      alert(lang === 'tr' ? `Analiz hatası: ${errorMsg}` : `Analysis error: ${errorMsg}`);
       setStep('idle');
     }
   };
