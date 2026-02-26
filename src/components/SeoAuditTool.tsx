@@ -162,10 +162,10 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
   const overallScore = realReportSummary?.score || 0;
 
   const scores = [
-    { label: t.scores.performance, value: Math.max(0, overallScore - Math.floor(Math.random() * 5)), icon: Zap, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-orange-500/10' },
-    { label: t.scores.seo, value: overallScore, icon: BarChart3, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-green-500/10' },
-    { label: t.scores.accessibility, value: Math.min(100, overallScore + Math.floor(Math.random() * 3)), icon: Eye, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-blue-500/10' },
-    { label: t.scores.bestPractices, value: Math.max(0, overallScore - Math.floor(Math.random() * 2)), icon: ShieldCheck, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-brand-primary/10' }
+    { label: t?.scores?.performance || 'Performance', value: Math.max(0, overallScore - Math.floor(Math.random() * 5)), icon: Zap, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-orange-500/10' },
+    { label: t?.scores?.seo || 'SEO', value: overallScore, icon: BarChart3, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-green-500/10' },
+    { label: t?.scores?.accessibility || 'Accessibility', value: Math.min(100, overallScore + Math.floor(Math.random() * 3)), icon: Eye, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-blue-500/10' },
+    { label: t?.scores?.bestPractices || 'Best Practices', value: Math.max(0, overallScore - Math.floor(Math.random() * 2)), icon: ShieldCheck, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-brand-primary/10' }
   ];
 
   return (
@@ -381,10 +381,10 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
                 </h3>
                 <p className="text-gray-300 text-base md:text-lg font-medium leading-relaxed max-w-3xl">
                   {Math.round(scores.reduce((a, b) => a + b.value, 0) / scores.length) >= 90
-                    ? t.summaryInsights.good
+                    ? (t?.summaryInsights?.good || 'Site is in good health.')
                     : Math.round(scores.reduce((a, b) => a + b.value, 0) / scores.length) >= 70
-                      ? t.summaryInsights.warning
-                      : t.summaryInsights.error
+                      ? (t?.summaryInsights?.warning || 'Some improvements needed.')
+                      : (t?.summaryInsights?.error || 'Critical issues detected.')
                   }
                 </p>
                 <div className="flex items-center space-x-4 pt-2">
@@ -531,7 +531,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {t.howItWorks.steps.map((step: any, i: number) => (
+            {t.howItWorks.steps.map((stepItem: any, i: number) => (
               <div key={i} className="glass-morphism p-8 rounded-[2rem] border border-white/5 relative overflow-hidden group">
                 <div className="absolute -top-4 -right-4 text-8xl font-black text-white/[0.03] pointer-events-none tracking-tighter">
                   {i + 1}
@@ -542,10 +542,10 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
                   {i === 2 && <BarChart3 className="w-6 h-6 text-brand-primary" />}
                 </div>
                 <h3 className="text-lg font-black uppercase tracking-tight mb-3">
-                  {step.title}
+                  {stepItem.title}
                 </h3>
                 <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                  {step.desc}
+                  {stepItem.desc}
                 </p>
               </div>
             ))}

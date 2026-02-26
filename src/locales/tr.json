@@ -415,6 +415,11 @@
         "needsImprovement": "50-89 Geliştirilmeli",
         "critical": "0-49 Kritik"
       },
+      "summaryInsights": {
+        "good": "Siteniz genel olarak iyi durumda. Bazı küçük optimizasyonlarla mükemmele ulaşabilirsiniz.",
+        "warning": "Sitenizde performans kaybı yaratan unsurlar var. Arama motorlarında yükselmek için iyileştirme yapılması önerilir.",
+        "error": "Sitenizde kritik hatalar tespit edildi. Bu durum kullanıcı hacminizi ve Google sıralamanızı olumsuz etkiliyor."
+      },
       "howItWorks": {
         "title": "Nasıl Kullanılır?",
         "steps": [
