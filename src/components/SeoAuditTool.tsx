@@ -64,7 +64,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
     const timeoutId = setTimeout(() => controller.abort(), 45000); // 45s timeout
 
     // Start Real API Call in background
-    const apiPromise = fetch('http://localhost:3000/api/audit', {
+    const apiPromise = fetch('/api/seo-audit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
