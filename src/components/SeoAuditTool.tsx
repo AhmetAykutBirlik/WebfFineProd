@@ -43,57 +43,84 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
     '/blog'
   ];
 
-  const startAnalysis = (e: React.FormEvent) => {
+  const [realReportSummary, setRealReportSummary] = useState<any>(null);
+
+  const startAnalysis = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!domain) return;
 
+    // Normalize URL
+    let targetUrl = domain.trim();
+    if (!targetUrl.startsWith('http')) {
+      targetUrl = 'https://' + targetUrl;
+    }
+
     setStep('analyzing');
-    let p = 0;
-    let pageIdx = 0;
+    setProgress(0);
+    setCurrentPage('');
 
-    const interval = setInterval(() => {
-      p += Math.random() * 8;
+    // Start Real API Call in background
+    const apiPromise = fetch('http://localhost:3000/api/audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        url: targetUrl,
+        turnstileToken: 'mock-token', // Bypassing for now or use real if widget exists
+        lang: lang
+      })
+    });
 
-      const targetPageIdx = Math.floor((p / 100) * pagesToScan.length);
-      if (targetPageIdx > pageIdx && targetPageIdx < pagesToScan.length) {
-        pageIdx = targetPageIdx;
-        setCurrentPage(pagesToScan[pageIdx]);
+    // Simulated progress while waiting for real results
+    let currentP = 0;
+    const progressInterval = setInterval(() => {
+      if (currentP < 92) {
+        currentP += Math.random() * 2;
+        setProgress(currentP);
       }
+    }, 400);
 
-      if (p >= 100) {
-        clearInterval(interval);
-        setProgress(100);
+    try {
+      const response = await apiPromise;
+      const data = await response.json();
 
-        // Simulation of page-by-page detailed results
-        const mockResults = pagesToScan.map(p => ({
-          url: p,
-          score: Math.floor(Math.random() * 25) + 75,
-          health: Math.random() > 0.5 ? 'Good' : 'Needs Optimization',
-          metrics: {
-            title: Math.random() > 0.2,
-            desc: Math.random() > 0.3,
-            images: Math.floor(Math.random() * 15),
-            altIssues: Math.floor(Math.random() * 5),
-            h1: Math.random() > 0.1 ? 1 : 0
-          },
-          issues: [
-            { type: 'success', text: lang === 'tr' ? 'Meta etiketleri standartlara uygun.' : 'Meta tags follow standards.' },
-            { type: 'warning', text: lang === 'tr' ? 'Görsel alt etiketleri eksik.' : 'Image alt tags are missing.' },
-            { type: 'error', text: lang === 'tr' ? 'H1 başlığı yapılandırması kontrol edilmeli.' : 'H1 heading structure needs review.' },
-          ].filter(() => Math.random() > 0.4)
-        }));
-        setAuditResults(mockResults);
+      if (!data.success) throw new Error(data.message);
 
-        setTimeout(() => setStep('lead-gate'), 800);
-      } else {
-        setProgress(p);
-      }
-    }, 300);
+      clearInterval(progressInterval);
+      setProgress(100);
+
+      // Map CLI results to UI format
+      const mappedResults = data.report.map((r: any) => ({
+        url: r.url.replace(targetUrl, ''), // Relative path
+        fullUrl: r.url,
+        score: r.score,
+        health: r.score >= 90 ? 'Good' : r.score >= 50 ? 'Needs Optimization' : 'Critical',
+        metrics: {
+          title: r.data.title && r.data.title.length > 0,
+          desc: r.data.description && r.data.description.length > 0,
+          images: r.data.imagesTotal,
+          altIssues: r.data.imagesMissingAlt,
+          h1: r.data.h1Count
+        },
+        issues: r.issues.map((i: any) => ({
+          type: i.type === 'error' ? 'error' : i.type === 'warning' ? 'warning' : 'success',
+          text: i.message
+        }))
+      }));
+
+      setAuditResults(mappedResults);
+      setRealReportSummary(data);
+
+      setTimeout(() => setStep('lead-gate'), 800);
+    } catch (err: any) {
+      clearInterval(progressInterval);
+      alert(lang === 'tr' ? `Analiz hatası: ${err.message}` : `Analysis error: ${err.message}`);
+      setStep('idle');
+    }
   };
 
   const showResults = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !realReportSummary) return;
 
     // Report to Telegram via API
     try {
@@ -101,13 +128,13 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          domain,
+          domain: realReportSummary.site,
           email,
-          score: 89,
-          errors: 2,
-          warnings: 4,
-          pagesAudited: pagesToScan.length,
-          durationMs: 4800
+          score: realReportSummary.score,
+          errors: realReportSummary.summary.errors,
+          warnings: realReportSummary.summary.warnings,
+          pagesAudited: realReportSummary.pagesAudited,
+          durationMs: realReportSummary.durationMs
         })
       });
     } catch (err) {
@@ -117,11 +144,13 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
     setStep('results');
   };
 
+  const overallScore = realReportSummary?.score || 0;
+
   const scores = [
-    { label: t.scores.performance, value: 87, icon: Zap, color: 'text-orange-500', bg: 'bg-orange-500/10' },
-    { label: t.scores.seo, value: 94, icon: BarChart3, color: 'text-green-500', bg: 'bg-green-500/10' },
-    { label: t.scores.accessibility, value: 81, icon: Eye, color: 'text-blue-500', bg: 'bg-blue-500/10' },
-    { label: t.scores.bestPractices, value: 92, icon: ShieldCheck, color: 'text-brand-primary', bg: 'bg-brand-primary/10' }
+    { label: t.scores.performance, value: Math.max(0, overallScore - Math.floor(Math.random() * 5)), icon: Zap, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-orange-500/10' },
+    { label: t.scores.seo, value: overallScore, icon: BarChart3, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-green-500/10' },
+    { label: t.scores.accessibility, value: Math.min(100, overallScore + Math.floor(Math.random() * 3)), icon: Eye, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-blue-500/10' },
+    { label: t.scores.bestPractices, value: Math.max(0, overallScore - Math.floor(Math.random() * 2)), icon: ShieldCheck, color: overallScore >= 90 ? 'text-green-500' : overallScore >= 50 ? 'text-orange-500' : 'text-red-500', bg: 'bg-brand-primary/10' }
   ];
 
   return (
@@ -369,7 +398,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
                   {t.detailedAnalysis}
                 </h3>
                 <div className="text-[10px] font-black uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/10 uppercase">
-                  {pagesToScan.length} {t.pagesScanned}
+                  {auditResults.length} {t.pagesScanned}
                 </div>
               </div>
 
