@@ -29,6 +29,7 @@
     "projects": "PROJELER",
     "services": "HİZMETLER",
     "blog": "BLOG",
+    "seoAnalysis": "ÜCRETSİZ SEO ANALİZİ",
     "contact": "İLETİŞİM"
   },
   "home": {
@@ -36,7 +37,8 @@
       "badge": "Dijital Çözüm Ortağınız",
       "title": "Markanızı Dijitalde Güçlendirin",
       "subtitle": "WebFine, işletmeniz için modern, hızlı ve güvenilir web çözümleri sunar. Tasarımdan yayına, her şey tek pakette.",
-      "cta": "Ücretsiz Danışmanlık Al"
+      "cta": "Ücretsiz SEO Analizi",
+      "ctaSub": "Kredi kartı gerektirmez. 30 saniyede ön rapor alın."
     },
     "why": {
       "title": "Neden WebFine?",
@@ -343,6 +345,85 @@
     "privacy": {
       "title": "Gizlilik Politikası",
       "content": "Gizliliğiniz bizim için önemlidir.\n\n### Topladığımız Bilgiler\nSitemizi ziyaret ettiğinizde, iletişim formu doldurduğunuzda veya hizmetlerimizi kullandığınızda bazı kişisel bilgileriniz toplanabilir.\n\n### Bilgi Güvenliği\nVerilerinizi yetkisiz erişime karşı korumak için güncel güvenlik önlemleri uygularız.\n\n### Üçüncü Taraflar\nKişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz."
+    }
+  },
+  "seoAnalysis": {
+    "title": "Sitenizi Yapay Zeka ile Analiz Edin",
+    "subtitle": "WebFine AI, sitenizi gerçek zamanlı olarak analiz eder. SEO, performans, güvenlik ve teknik altyapı dahil olmak üzere 50+ kritik metriği saniyeler içinde tarar.",
+    "description": "Akıllı analiz motorumuz yalnızca skor üretmez. İyileştirme fırsatlarını öncelik sırasına göre listeler ve net aksiyon önerileri sunar.",
+    "inputHint": "Alan adınızı girin ve yapay zeka destekli teknik taramayı başlatın.",
+    "trustBadge": {
+      "free": "Ücretsizdir.",
+      "noCard": "Kredi kartı gerektirmez.",
+      "instant": "Anında ön rapor sunar."
+    },
+    "features": {
+      "deepScan": {
+        "title": "Yapay Zeka Destekli Derin Tarama",
+        "desc": "Sitedeki teknik SEO yapılandırması, meta veri optimizasyonu, mobil uyumluluk, iç link mimarisi ve başlık hiyerarşisi WebFine AI Agent’ları tarafından çok katmanlı olarak incelenir."
+      },
+      "performance": {
+        "title": "Gelişmiş Performans Analizi",
+        "desc": "AI motoru yalnızca Lighthouse skorlarını göstermez. Gerçek kullanıcı deneyimini etkileyen darboğazları (render blocking kaynaklar, görsel optimizasyon eksikleri vb.) tespit eder."
+      },
+      "security": {
+        "title": "Güvenlik ve Teknik Sağlık Kontrolü",
+        "desc": "SSL doğrulaması, HTTP güvenlik header’ları, mixed content sorunları ve temel yapılandırma riskleri kontrol edilerek olası zafiyetler erken aşamada tespit edilir."
+      },
+      "actionPlan": {
+        "title": "Önceliklendirilmiş İyileştirme Planı",
+        "desc": "Tespit edilen sorunlar Kritik, Önemli ve İyileştirilebilir olarak sınıflandırılır. Hangi adımı önce atmanız gerektiğini net bir şekilde gösterir."
+      }
+    },
+    "teaser": {
+      "title": "Sitenizi 30 saniyede test edin",
+      "desc": "Web sitenizi yapay zeka ile analiz edin, SEO hatalarını ve performans sorunlarını anında keşfedin.",
+      "placeholder": "ornek: firma.com",
+      "button": "Analiz Et"
+    },
+    "tool": {
+      "inputPlaceholder": "web-siteniz.com",
+      "startAnalysis": "Yapay Zeka Analizini Başlat",
+      "searching": "Analiz Ediliyor...",
+      "leadGateTitle": "Detaylı SEO Raporunuz Hazır",
+      "leadGateDesc": "Hızlı ön analiz tamamlandı. Detaylı teknik raporu görüntülemek için e-posta adresinizi girin.",
+      "emailLabel": "E-posta Adresiniz",
+      "emailPlaceholder": "ornek@mail.com",
+      "viewReport": "Raporu Gör",
+      "resultsTitle": "Analiz Sonuçları",
+      "leadGateFooter": "ÜCRETSİZ ANALİZ • SPAM YOK • WEBFİNE GÜVENCESİ",
+      "detailedAnalysis": "Detaylı Sayfa Analizi",
+      "pagesScanned": "SAYFA TARANDI",
+      "optimized": "BAŞARILI",
+      "needsAttention": "İYLEŞTİRME GEREK",
+      "metrics": {
+        "titles": "BAŞLIKLAR",
+        "headings": "H1 YAPISI",
+        "images": "GÖRSELLER",
+        "altTags": "ALT ETİKETLER"
+      },
+      "scores": {
+        "performance": "Performans",
+        "seo": "SEO",
+        "accessibility": "Erişilebilirlik",
+        "bestPractices": "En İyi Pratikler"
+      },
+      "summaryAnalysis": "Özet Analiz",
+      "scale": {
+        "title": "Puan Skalası",
+        "good": "90-100 İyi",
+        "needsImprovement": "50-89 Geliştirilmeli",
+        "critical": "0-49 Kritik"
+      },
+      "summaryInsights": {
+        "good": "Siteniz genel olarak iyi durumda. Bazı küçük optimizasyonlarla mükemmele ulaşabilirsiniz.",
+        "warning": "Sitenizde performans kaybı yaratan unsurlar var. Arama motorlarında yükselmek için iyileştirme yapılması önerilir.",
+        "error": "Sitenizde kritik hatalar tespit edildi. Bu durum kullanıcı hacminizi ve Google sıralamanızı olumsuz etkiliyor."
+      }
+    },
+    "meta": {
+      "title": "Yapay Zeka Destekli Ücretsiz SEO Analizi | WebFine",
+      "description": "Web sitenizi 30 saniyede yapay zeka ile analiz edin. SEO, performans, güvenlik ve teknik altyapı raporunu anında öğrenin."
     }
   }
 }

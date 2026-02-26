@@ -29,6 +29,7 @@
         "projects": "PROJECTS",
         "services": "SERVICES",
         "blog": "BLOG",
+        "seoAnalysis": "FREE SEO ANALYSIS",
         "contact": "CONTACT"
     },
     "home": {
@@ -36,7 +37,8 @@
             "badge": "Your Digital Transformation Partner",
             "title": "Establish a Powerful Digital Legacy",
             "subtitle": "At WebFine, we design modern, performance-driven web experiences that mirror the prestige of your business in the digital world.",
-            "cta": "Let's Begin"
+            "cta": "Free SEO Analysis",
+            "ctaSub": "No credit card required. Get a preliminary report in 30 seconds."
         },
         "why": {
             "title": "Why WebFine?",
@@ -343,6 +345,85 @@
         "privacy": {
             "title": "Privacy Policy",
             "content": "Your privacy is important to us.\n\n### Information We Collect\nWhen you visit our site, fill out a contact form, or use our services, some personal information may be collected.\n\n### Information Security\nWe use the latest security technologies to protect your data against unauthorized access.\n\n### Third Parties\nYour personal data is not shared with third parties except for legal obligations."
+        }
+    },
+    "seoAnalysis": {
+        "title": "Analyze Your Website with AI",
+        "subtitle": "WebFine AI analyzes your website in real time. It scans 50+ critical metrics including SEO, performance, security and technical infrastructure within seconds.",
+        "description": "Our intelligent engine doesn’t just generate scores. It prioritizes improvement opportunities and provides clear, actionable recommendations.",
+        "inputHint": "Enter your domain and start the AI-powered technical scan.",
+        "trustBadge": {
+            "free": "Free to use.",
+            "noCard": "No credit card required.",
+            "instant": "Instant preliminary report."
+        },
+        "features": {
+            "deepScan": {
+                "title": "AI-Powered Deep Scan",
+                "desc": "Your website is analyzed by WebFine AI agents across multiple layers. Technical SEO structure, metadata optimization, mobile responsiveness, internal linking and heading hierarchy are thoroughly evaluated."
+            },
+            "performance": {
+                "title": "Advanced Performance Analysis",
+                "desc": "The AI engine goes beyond Lighthouse scores. It detects bottlenecks impacting real user experience such as render-blocking resources, image optimization gaps and caching strategy issues."
+            },
+            "security": {
+                "title": "Security & Technical Health Check",
+                "desc": "SSL validation, HTTP security headers, mixed content issues and core configuration risks are examined. Potential vulnerabilities are detected early."
+            },
+            "actionPlan": {
+                "title": "Prioritized Improvement Plan",
+                "desc": "Identified issues are categorized as Critical, Important, and Optimizable. This allows you to clearly see which actions to take first."
+            }
+        },
+        "teaser": {
+            "title": "Test your site in 30 seconds",
+            "desc": "Analyze your website with AI, instantly discover SEO errors and performance issues.",
+            "placeholder": "example: company.com",
+            "button": "Analyze Now"
+        },
+        "tool": {
+            "inputPlaceholder": "your-website.com",
+            "startAnalysis": "Start AI Analysis",
+            "searching": "Analyzing...",
+            "leadGateTitle": "Your Detailed SEO Report is Ready",
+            "leadGateDesc": "Fast preliminary analysis is complete. Enter your email address to view the detailed technical report.",
+            "emailLabel": "Your Email Address",
+            "emailPlaceholder": "example@mail.com",
+            "viewReport": "View Report",
+            "resultsTitle": "Analysis Results",
+            "leadGateFooter": "FREE ANALYSIS • NO SPAM • WEBFINE PROTECTION",
+            "detailedAnalysis": "Detailed Page Audit",
+            "pagesScanned": "PAGES SCANNED",
+            "optimized": "OPTIMIZED",
+            "needsAttention": "NEEDS ATTENTION",
+            "metrics": {
+                "titles": "TITLES",
+                "headings": "H1 STRUCTURE",
+                "images": "IMAGES",
+                "altTags": "ALT TAGS"
+            },
+            "scores": {
+                "performance": "Performance",
+                "seo": "SEO",
+                "accessibility": "Accessibility",
+                "bestPractices": "Best Practices"
+            },
+            "summaryAnalysis": "Summary Analysis",
+            "scale": {
+                "title": "Score Scale",
+                "good": "90-100 Good",
+                "needsImprovement": "50-89 Needs Improvement",
+                "critical": "0-49 Critical"
+            },
+            "summaryInsights": {
+                "good": "Your site is generally in good health. You can reach perfection with some minor optimizations.",
+                "warning": "There are elements causing performance loss. Improvements are recommended to rank higher on search engines.",
+                "error": "Critical errors detected. This situation negatively impacts your user volume and Google rankings."
+            }
+        },
+        "meta": {
+            "title": "AI-Powered Free SEO Analysis | WebFine",
+            "description": "Analyze your website in 30 seconds with AI. Get instant insights on SEO, performance, security and technical health."
         }
     }
 }

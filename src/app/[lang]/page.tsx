@@ -1,6 +1,7 @@
 import { getDictionary } from "@/lib/i18n";
 import Link from "next/link";
 import DomainSearch from "@/components/DomainCheck";
+import SeoTeaser from "@/components/SeoTeaser";
 import {
   ArrowRight,
   Play,
@@ -98,29 +99,37 @@ export default async function Home({
               {dictionary.home?.hero?.subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-6 pt-4">
-              <Link
-                href={`/${lang}/projelerimiz`}
-                className="w-full sm:w-auto bg-[#0066FF] hover:bg-[#0052cc] text-white px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-105 active:scale-95 text-center group relative overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center justify-center">
-                  {dictionary.home?.hero?.cta}
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </span>
-              </Link>
-              <Link
-                href={`/${lang}/iletisim`}
-                className="w-full sm:w-auto bg-white hover:bg-gray-100 text-black px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:scale-105 active:scale-95 text-center flex items-center justify-center space-x-3"
-              >
-                <Play className="w-4 h-4 fill-current text-[#0066FF]" />
-                <span>{dictionary.common?.buttons?.contactUs}</span>
-              </Link>
+            <div className="flex flex-col items-center justify-center space-y-6 pt-4 w-full">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-6 w-full">
+                <Link
+                  href={`/${lang}/ucretsiz-seo-analizi`}
+                  className="w-full sm:w-auto bg-[#0066FF] hover:bg-[#0052cc] text-white px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-105 active:scale-95 text-center group relative overflow-hidden flex items-center justify-center"
+                >
+                  <span className="relative z-10 flex items-center justify-center">
+                    {dictionary.home?.hero?.cta}
+                    <div className="ml-3 px-2 py-1 rounded bg-red-600 text-[8px] font-black text-white animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.5)]">
+                      NEW
+                    </div>
+                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  </span>
+                </Link>
+                <Link
+                  href={`/${lang}/iletisim`}
+                  className="w-full sm:w-auto bg-white hover:bg-gray-100 text-black px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:scale-105 active:scale-95 text-center flex items-center justify-center space-x-3"
+                >
+                  <Play className="w-4 h-4 fill-current text-[#0066FF]" />
+                  <span>{dictionary.common?.buttons?.contactUs}</span>
+                </Link>
+              </div>
+
+
             </div>
           </div>
         </div>
       </section>
 
       <DomainSearch dictionary={dictionary} lang={lang} />
+      <SeoTeaser dictionary={dictionary} lang={lang} />
 
       {/* Neden WebFine? */}
       <section className="py-16 md:py-20 relative overflow-hidden">

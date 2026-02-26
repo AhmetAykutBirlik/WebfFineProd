@@ -33,4 +33,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Yeni Özellikler (Şubat 2026)
+
+### Ücretsiz SEO Analiz Aracı
+WebFine sitesine yapay zeka destekli ücretsiz SEO analiz özelliği eklendi.
+- **Hero CTA**: Ana sayfadaki hero bölümü analiz aracına yönlendirecek şekilde güncellendi.
+- **Analiz Sayfası**: `/ucretsiz-seo-analizi` rotasında detaylı analiz aracı oluşturuldu.
+- **SEO Teaser**: Ana sayfaya hızlı analiz girişi sağlayan yeni bir blok eklendi.
+- **Lead Generation**: Analiz sonuçlarını göstermeden önce e-posta toplama mekanizması entegre edildi.
+- **Çoklu Dil Desteği**: TR ve EN dilleri için tam senkronizasyon sağlandı.
