@@ -100,29 +100,27 @@ export default async function Home({
             </p>
 
             <div className="flex flex-col items-center justify-center space-y-6 pt-4 w-full">
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-6 w-full">
+              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6 w-full lg:w-auto">
                 <Link
                   href={`/${lang}/ucretsiz-seo-analizi`}
-                  className="w-full sm:w-auto bg-[#0066FF] hover:bg-[#0052cc] text-white px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-105 active:scale-95 text-center group relative overflow-hidden flex items-center justify-center"
+                  className="w-full md:w-auto bg-[#0066FF] hover:bg-[#0052cc] text-white px-8 py-5 md:px-12 md:py-6 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-105 active:scale-95 text-center group relative overflow-hidden flex items-center justify-center"
                 >
-                  <span className="relative z-10 flex items-center justify-center">
-                    {dictionary.home?.hero?.cta}
-                    <div className="ml-3 px-2 py-1 rounded bg-red-600 text-[8px] font-black text-white animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.5)]">
+                  <span className="relative z-10 flex items-center justify-center flex-wrap gap-2">
+                    <span className="shrink-0">{dictionary.home?.hero?.cta}</span>
+                    <div className="px-2 py-0.5 rounded bg-red-600 text-[7px] md:text-[8px] font-black text-white animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.5)] shrink-0">
                       NEW
                     </div>
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="ml-1 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-2 transition-transform shrink-0" />
                   </span>
                 </Link>
                 <Link
                   href={`/${lang}/iletisim`}
-                  className="w-full sm:w-auto bg-white hover:bg-gray-100 text-black px-10 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:scale-105 active:scale-95 text-center flex items-center justify-center space-x-3"
+                  className="w-full md:w-auto bg-white hover:bg-gray-100 text-black px-8 py-5 md:px-12 md:py-6 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:scale-105 active:scale-95 text-center flex items-center justify-center space-x-3 shrink-0"
                 >
                   <Play className="w-4 h-4 fill-current text-[#0066FF]" />
                   <span>{dictionary.common?.buttons?.contactUs}</span>
                 </Link>
               </div>
-
-
             </div>
           </div>
         </div>

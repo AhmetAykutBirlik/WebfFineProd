@@ -158,10 +158,10 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
               <div className="space-y-6">
                 <button
                   type="submit"
-                  className="w-full bg-[#0066FF] hover:bg-[#0052cc] text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-[1.02] active:scale-[0.98] group flex items-center justify-center"
+                  className="w-full bg-[#0066FF] hover:bg-[#0052cc] text-white py-5 md:py-6 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.3em] transition-all shadow-[0_20px_50px_rgba(0,102,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,102,255,0.6)] hover:scale-[1.02] active:scale-[0.98] group flex items-center justify-center"
                 >
                   <span>{t.startAnalysis}</span>
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="ml-3 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-2 transition-transform" />
                 </button>
 
                 <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pt-2">
@@ -217,7 +217,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="text-2xl font-black uppercase tracking-widest animate-pulse">
+              <h3 className="text-xl md:text-2xl font-black uppercase tracking-widest animate-pulse">
                 {t.searching}
               </h3>
               <div className="flex flex-col items-center space-y-2">
@@ -239,7 +239,7 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="glass-morphism p-8 md:p-12 rounded-[2.5rem] border border-white/20 shadow-3xl text-center space-y-8 relative overflow-hidden"
+            className="glass-morphism p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border border-white/20 shadow-3xl text-center space-y-8 relative overflow-hidden"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-brand-primary to-transparent"></div>
 
@@ -297,15 +297,15 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
               <p className="text-brand-primary font-bold uppercase tracking-[0.3em]">{domain}</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {scores.map((score, i) => (
-                <div key={i} className="glass-morphism p-6 rounded-3xl border border-white/5 flex flex-col items-center text-center space-y-4">
-                  <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center", score.bg)}>
-                    <score.icon className={cn("w-6 h-6", score.color)} />
+                <div key={i} className="glass-morphism p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col items-center text-center space-y-3 md:space-y-4">
+                  <div className={cn("w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center", score.bg)}>
+                    <score.icon className={cn("w-5 h-5 md:w-6 md:h-6", score.color)} />
                   </div>
                   <div>
-                    <div className="text-3xl font-black mb-1">{score.value}</div>
-                    <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{score.label}</div>
+                    <div className="text-2xl md:text-3xl font-black mb-1">{score.value}</div>
+                    <div className="text-[8px] md:text-[10px] text-gray-400 font-bold uppercase tracking-widest">{score.label}</div>
                   </div>
                 </div>
               ))}
@@ -331,11 +331,11 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
             <div className="glass-morphism p-8 rounded-[2.5rem] border border-white/10 bg-brand-primary/5 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 blur-[50px] -z-10 group-hover:bg-brand-primary/20 transition-all"></div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center">
-                  <AlertCircle className="w-6 h-6 mr-3 text-brand-primary" />
+                <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight flex items-center">
+                  <AlertCircle className="w-5 h-5 md:w-6 md:h-6 mr-3 text-brand-primary" />
                   {t.summaryAnalysis}
                 </h3>
-                <p className="text-gray-300 text-lg font-medium leading-relaxed max-w-3xl">
+                <p className="text-gray-300 text-base md:text-lg font-medium leading-relaxed max-w-3xl">
                   {Math.round(scores.reduce((a, b) => a + b.value, 0) / scores.length) >= 90
                     ? t.summaryInsights.good
                     : Math.round(scores.reduce((a, b) => a + b.value, 0) / scores.length) >= 70
@@ -362,10 +362,10 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
               </div>
             </div>
 
-            <div className="glass-morphism p-8 rounded-[2.5rem] border border-white/5 space-y-8">
+            <div className="glass-morphism p-5 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border border-white/5 space-y-6 md:space-y-8">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center">
-                  <Search className="w-6 h-6 mr-3 text-brand-primary" />
+                <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight flex items-center">
+                  <Search className="w-5 h-5 md:w-6 md:h-6 mr-3 text-brand-primary" />
                   {t.detailedAnalysis}
                 </h3>
                 <div className="text-[10px] font-black uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/10 uppercase">

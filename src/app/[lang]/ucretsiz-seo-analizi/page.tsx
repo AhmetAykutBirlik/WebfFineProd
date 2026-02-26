@@ -46,7 +46,7 @@ export default async function SeoAnalysisPage({ params }: { params: Promise<{ la
                             <Zap className="w-3 h-3 animate-pulse" />
                             <span>{dictionary.seoAnalysis.meta.title}</span>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-[1.1] text-white max-w-4xl mx-auto uppercase">
+                        <h1 className="text-3xl sm:text-4xl md:text-7xl font-black tracking-tighter leading-[1.1] text-white max-w-4xl mx-auto uppercase">
                             {dictionary.seoAnalysis.title}
                         </h1>
                         <div className="max-w-3xl mx-auto space-y-6">

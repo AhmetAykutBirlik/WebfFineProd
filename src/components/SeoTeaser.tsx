@@ -44,21 +44,21 @@ export default function SeoTeaser({ dictionary, lang }: { dictionary: any; lang:
                     <ScrollReveal className="space-y-10 order-1 lg:order-2">
                         <div className="space-y-6 text-center lg:text-left">
                             <div className="h-[2px] w-12 bg-brand-primary mx-auto lg:mx-0"></div>
-                            <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-white uppercase leading-[0.95]">
+                            <h2 className="text-3xl sm:text-4xl md:text-7xl font-black tracking-tighter text-white uppercase leading-[0.95]">
                                 {t.title}
                             </h2>
-                            <p className="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            <p className="text-base md:text-xl text-gray-400 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
                                 {t.desc}
                             </p>
                         </div>
 
-                        <div className="flex justify-center lg:justify-start pt-4">
+                        <div className="flex justify-center lg:justify-start pt-2 md:pt-4">
                             <Link
                                 href={`/${lang}/ucretsiz-seo-analizi`}
-                                className="inline-flex items-center space-x-4 bg-[#0066FF] hover:bg-[#0052cc] text-white px-10 py-6 md:px-12 md:py-8 rounded-[2rem] font-black text-xs md:text-sm uppercase tracking-[0.4em] transition-all shadow-[0_30px_60px_rgba(0,102,255,0.3)] hover:shadow-[0_40px_80px_rgba(0,102,255,0.5)] hover:scale-[1.05] active:scale-[0.95] group/btn"
+                                className="inline-flex items-center space-x-4 bg-[#0066FF] hover:bg-[#0052cc] text-white px-8 py-5 md:px-12 md:py-8 rounded-[2rem] font-black text-[10px] md:text-sm uppercase tracking-[0.4em] transition-all shadow-[0_30px_60px_rgba(0,102,255,0.3)] hover:shadow-[0_40px_80px_rgba(0,102,255,0.5)] hover:scale-[1.05] active:scale-[0.95] group/btn"
                             >
                                 <span>{t.button}</span>
-                                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover/btn:translate-x-3 transition-transform" />
+                                <ArrowRight className="w-4 h-4 md:w-6 md:h-6 group-hover/btn:translate-x-3 transition-transform" />
                             </Link>
                         </div>
                     </ScrollReveal>
