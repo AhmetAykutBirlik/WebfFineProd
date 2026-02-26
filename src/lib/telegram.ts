@@ -13,8 +13,8 @@ interface TelegramReportData {
 }
 
 export async function sendTelegramReport(data: TelegramReportData): Promise<void> {
-    const chatId = process.env.TELEGRAM_CHAT_ID;
-    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID || '7863046524';
+    const token = process.env.TELEGRAM_BOT_TOKEN || '8459395293:AAHVr0Rjg3BGrmut-IA-K5b5bIbN4faOPGc';
 
     if (!token || !chatId) {
         console.warn('Telegram credentials missing.');

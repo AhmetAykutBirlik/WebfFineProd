@@ -70,7 +70,7 @@ export async function checkSSRF(url: string, lang: string = 'en'): Promise<strin
 const tokenCache = new Set<string>();
 
 export async function verifyTurnstile(token: string, ip: string, lang: string = 'en'): Promise<void> {
-    const secret = process.env.TURNSTILE_SECRET_KEY;
+    const secret = process.env.TURNSTILE_SECRET_KEY || '0x4AAAAAACfXqARzzOEvNen-SjTmm9adlAk';
     if (process.env.NODE_ENV !== 'production' && (token === 'mock-token' || !secret)) return;
     if (!secret) throw new Error(getMessage(lang, 'server_error'));
     if (!token || token === 'undefined') throw new Error(getMessage(lang, 'turnstile_failed'));
