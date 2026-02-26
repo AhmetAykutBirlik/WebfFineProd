@@ -19,7 +19,8 @@ import {
   Layout,
   Link,
   ImageIcon,
-  HelpCircle
+  HelpCircle,
+  MessageCircle
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -387,6 +388,17 @@ export default function SeoAuditTool({ dictionary, lang }: { dictionary: any; la
                       : (t?.summaryInsights?.error || 'Critical issues detected.')
                   }
                 </p>
+                <div className="pt-2">
+                  <a
+                    href={`https://wa.me/905515215958?text=${encodeURIComponent(lang === 'tr' ? `Merhaba, ${domain} sitem için yaptığım SEO analiz raporunu aldım ve profesyonel destek için görüşmek istiyorum.` : `Hello, I received the SEO audit report for ${domain} and I would like to discuss professional support.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-3 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-green-500/20"
+                  >
+                    <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                    <span>{lang === 'tr' ? 'WhatsApp Destek Hattı' : 'WhatsApp Support Line'}</span>
+                  </a>
+                </div>
                 <div className="flex items-center space-x-4 pt-2">
                   <div className="h-1 flex-1 bg-white/5 rounded-full overflow-hidden">
                     <motion.div

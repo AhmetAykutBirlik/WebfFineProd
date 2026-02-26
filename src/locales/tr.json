@@ -416,9 +416,9 @@
         "critical": "0-49 Kritik"
       },
       "summaryInsights": {
-        "good": "Siteniz genel olarak iyi durumda. Bazı küçük optimizasyonlarla mükemmele ulaşabilirsiniz.",
-        "warning": "Sitenizde performans kaybı yaratan unsurlar var. Arama motorlarında yükselmek için iyileştirme yapılması önerilir.",
-        "error": "Sitenizde kritik hatalar tespit edildi. Bu durum kullanıcı hacminizi ve Google sıralamanızı olumsuz etkiliyor."
+        "good": "Harika! Sitenizin altyapısı oldukça güçlü. Ancak dijital dünyada zirveyi korumak için profesyonel dokunuşlar her zaman fark yaratır. Skorunuzu mükemmele taşımak ve özel stratejilerimizle rakiplerinizin bir adım önüne geçmek için bizimle iletişime geçebilirsiniz.",
+        "warning": "Dikkat! Sitenizde performans kaybına ve Google sıralamalarında düşüşe neden olan önemli teknik eksikler var. Bu sorunlar satışlarınızı ve kullanıcı trafiğinizi olumsuz etkiliyor olabilir. Vakit kaybetmeden WhatsApp üzerinden uzman ekibimizden profesyonel destek alabilirsiniz.",
+        "error": "KRİTİK UYARI! Web sitenizde trafik ve müşteri kaybına yol açan çok ciddi yapısal hatalar tespit edildi. Mevcut durumunuz dijital prestijinizi tehlikeye atıyor. Acil müdahale ve kalıcı çözümler için hemen şimdi WhatsApp destek hattımız üzerinden bizimle bağlantı kurun!"
       },
       "howItWorks": {
         "title": "Nasıl Kullanılır?",
