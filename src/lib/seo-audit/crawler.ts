@@ -165,7 +165,7 @@ export class Crawler {
 
             const images = $('img');
             let missingAlt = 0;
-            images.each((_, el) => {
+            images.each((_: number, el: any) => {
                 const alt = $(el).attr('alt');
                 if (alt === undefined || alt.trim() === '') missingAlt++;
             });
@@ -187,7 +187,7 @@ export class Crawler {
             const maxLinksToProcess = 100;
             let collected = 0;
 
-            $('a').each((_, el) => {
+            $('a').each((_: number, el: any) => {
                 if (collected >= maxLinksToProcess) return;
                 const href = $(el).attr('href');
                 if (!href) return;
